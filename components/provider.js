@@ -8,8 +8,16 @@ const Provider = ({ children, theme, index, slides }) => (
       textDecoration: 'none'
     },
   }}>
+    <div css={{
+      position: 'absolute',
+      width: '100vw',
+      height: '100vh',
+      background: '#FFFFF0',
+      opacity: '0.80',
+      zIndex: '0'
+    }}></div>
     {children}
-    <Footer theme={theme} index={index} />
+    {/* <Footer theme={theme} index={index} /> */}
   </div>
 )
 
