@@ -6,7 +6,12 @@ import { Split } from '@mdx-deck/layouts'
 
 import provider from 'components/provider'
 import Header from 'components/header'
-import Image from 'components/image'
+import KingMarkdown from 'components/king-markdown'
+import PrincessJavaScript from 'components/princess-javascript'
+
+export const colors = {
+  black: '#0a0a0a'
+}
 
 export const theme = {
   // ...highlight,
@@ -18,9 +23,9 @@ export const theme = {
   font: 'Nunito, sans-serif',
   googleFont: 'https://fonts.googleapis.com/css?family=Nunito:300,300i,700',
   colors: {
-    // text: colors.black,
-    // link: colors.black,
-    // code: colors.black,
+    text: colors.black,
+    link: colors.black,
+    code: colors.black,
     background: 'none' //colors.black
   },
   code: {
@@ -36,7 +41,7 @@ export const theme = {
   metadata: {
     author: `Josh Dzielak`,
     twitter: `@dzello`,
-    hashtag: `#JAMstack`,
+    hashtag: `#JAMstack London`,
     date: `May 28, 2019`,
     repository: `https://github.com/developermode/mdx-fairy-tale`
   },
@@ -67,6 +72,4 @@ export const theme = {
 
 ---
 
-<Image src="/images/josh-baguettes.jpg" css={{ height: `400px` }} />
-
-<Header>I'm Josh</Header>
+<KingMarkdown />

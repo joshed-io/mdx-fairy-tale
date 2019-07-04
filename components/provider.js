@@ -30,7 +30,7 @@ const Provider = ({ children, theme, index, slides }) => (
     }}>
     {children}
     </div>
-    {/* <Footer theme={theme} index={index} /> */}
+    <Footer theme={theme} index={index} />
   </div>
 )
 
