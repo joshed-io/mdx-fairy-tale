@@ -4,34 +4,26 @@ import highlight from '@mdx-deck/themes/syntax-highlighter'
 import { yellow as mdxTheme } from '@mdx-deck/themes'
 import { Split } from '@mdx-deck/layouts'
 
-import colors from 'colors'
 import provider from 'components/provider'
 import Header from 'components/header'
 import Image from 'components/image'
 
 export const theme = {
-  ...highlight,
+  // ...highlight,
   ...provider,
-  ...mdxTheme,
+  // ...mdxTheme,
   css: {
     padding: "0 15%"
   },
   font: 'Nunito, sans-serif',
   googleFont: 'https://fonts.googleapis.com/css?family=Nunito:300,300i,700',
   colors: {
-    text: colors.black,
-    link: colors.black,
-    code: colors.black,
-    background: colors.black
+    // text: colors.black,
+    // link: colors.black,
+    // code: colors.black,
+    background: 'none' //colors.black
   },
   code: {
-  },
-  Slide: {
-    background: "url('/images/fairy-tale-castle.jpg') no-repeat center center",
-    backgroundSize: "cover",
-    'p, img': {
-      position: 'relative'
-    }
   },
   pre: {
     fontSize: `28px`,
@@ -39,8 +31,6 @@ export const theme = {
     color: `#fff !important`
   },
   heading: {
-    position: `relative`,
-    zIndex: `1000`,
     textTransform: `none`
   },
   metadata: {
