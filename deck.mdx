@@ -1,14 +1,15 @@
-import { Head, Notes } from 'mdx-deck'
+import { Head, Notes, Image as MdxImage  } from 'mdx-deck'
 import { Appear } from '@mdx-deck/components'
-import highlight from '@mdx-deck/themes/syntax-highlighter'
-import { book as mdxTheme } from '@mdx-deck/themes'
-import { Image as MdxImage } from 'mdx-deck'
-import { Split } from '@mdx-deck/layouts'
+import { Split, Horizontal } from '@mdx-deck/layouts'
+import Box from '@mdx-deck/layouts/src/Box'
+import Flex from '@mdx-deck/layouts/src/Flex'
 
 import AppearOnly from 'components/AppearOnly'
 import Image from 'components/Image'
 import Provider from 'components/provider'
 import Header from 'components/header'
+import JSplit from 'components/Split'
+import JHorizontal from 'components/Horizontal'
 import KingMarkdown from 'components/king-markdown'
 import PrincessJavaScript from 'components/princess-javascript'
 
@@ -17,32 +18,22 @@ export const colors = {
 }
 
 export const theme = {
-  // ...highlight,
   Provider,
-  ...mdxTheme,
-  // font: 'Nunito, sans-serif',
-  // googleFont: 'https://fonts.googleapis.com/css?family=Nunito:300,300i,700',
+  font: 'Crimson Text, serif',
+  googleFont: 'https://fonts.googleapis.com/css?family=Crimson+Text',
   colors: {
     text: colors.black,
     link: colors.black,
     code: colors.black,
-    // background: colors.black
   },
   Slide: {
     background: 'url(/images/fairy-tale-castle-o25.jpg) no-repeat center center',
     backgroundSize: 'cover'
   },
-  css: {
-  },
-  code: {
-  },
   pre: {
-    fontSize: `28px`,
-    lineHeight: `42px`,
-    color: `#fff !important`
-  },
-  heading: {
-    textTransform: `none`
+    // fontSize: `28px`,
+    // lineHeight: `42px`,
+    // color: `#fff !important`
   },
   metadata: {
     author: `Josh Dzielak`,
@@ -76,22 +67,22 @@ export const theme = {
 
 ---
 
-<Split>
-<h2 style={{ width: '40vw' }}>I'm Josh</h2>
+<JSplit>
+<h1>I'm Josh</h1>
 
 <AppearOnly>
-<div style={{ width: '40vw' }}>
+<div>
 <Image src="/images/josh-dzielak-profile-2019.jpg" css={{ borderRadius: '50px' }} />
 </div>
-<div style={{ width: '40vw' }}>
-<img src="/images/algolia-logo.png" css={{ }} />
+<div>
+<img src="/images/algolia-logo.png" />
 </div>
-<div style={{ width: '40vw' }}>
-<img src="/images/developermode-logo-black.png" css={{ }} />
+<div>
+<img src="/images/developermode-logo-black.png" />
 </div>
 </AppearOnly>
 
-</Split>
+</JSplit>
 
 <Notes>
 Hi I’m Josh, a developer advocate formerly at Algolia and now the co-founder of DeveloperMode, where we do developer-relations-as-a-service and get to play with lots of cool tech. Like MDX, which is what I'll talk to you about tonight.
@@ -101,7 +92,7 @@ Hi I’m Josh, a developer advocate formerly at Algolia and now the co-founder o
 
 <img src="/images/mdx-logo.svg" css={{ width: "50vw" }}/>
 
-### MDX = Markdown + JSX
+## MDX = Markdown + JSX
 
 <Notes>
 MDX lets you put JSX components in your markdown documents, making the power of your whole JavaScript app accessible from your content. To show you how MDX can help JAMstack teams, I want to tell you a story. But since case studies can be kinda boring, I'll tell you a fairy tale instead. 
@@ -117,7 +108,12 @@ Once upon a time, there was a king named King Markdown.
 
 ---
 
-<KingMarkdown />
+<div><KingMarkdown /></div>
+
+<Appear>
+<div>just scrolling</div>
+<div>great wall of text</div>
+</Appear>
 
 <Notes>
 King Markdown loved text-heavy, long-form content. Paragraph after paragraph, multiple sentences each.
@@ -129,7 +125,12 @@ He's so adamant about having his content his way that he built a Great Wall of T
 
 ---
 
-<PrincessJavaScript />
+<div><PrincessJavaScript /></div>
+
+<Appear>
+<div>gestures</div>
+<div>discovering jamstack</div>
+</Appear>
 
 <Notes>
 King Markdown has a daughter, Princess JavaScript. Not a normal name but she’s not a normal princess.
@@ -141,9 +142,11 @@ How'd she learn all that, growing up inside the Great Wall of Text? One night sh
 
 ---
 
-Struggle
-
-- princess vs. the king
+<JHorizontal>
+<PrincessJavaScript />
+<h1>😖</h1>
+<KingMarkdown />
+</JHorizontal>
 
 <Notes>
 So as you can imagine, there's been a lot of tension in the royal palace, similar to what some of you may have even seen in your content teams. The kingdom's content experts, known as the Royal Academy of Content, were struggling to please both king and princess.
@@ -151,7 +154,16 @@ So as you can imagine, there's been a lot of tension in the royal palace, simila
 
 ---
 
-Royal Academy of Content
+# 📯<br/> Royal Academy of Content
+
+<Flex>
+<Box width={1/3}>
+Markdown can't handle events!
+</Box>
+<Box width={1/3}>
+Content authors don't know JavaScript!
+</Box>
+</Flex>
 
 <Notes>
 The academy's markdown authors wanted to make their content more interactive, but they didn't know how. "There's no way to handle events in markdown", they cried! The front-end engineers wanted to help, but they thought it would be too dangerous to let the markdown authors put arbitrary JavaScript code in their documents.
@@ -159,9 +171,9 @@ The academy's markdown authors wanted to make their content more interactive, bu
 
 ---
 
-Then one day...
+# Then one day...
 
-- show the tweet
+<img src="/images/zeit-mdx-tweet.png" css={{ width: '30vw' }} />
 
 <Notes>
 One day, one of the engineers at the Royal Academy of Content was browsing Twitter and saw a tweet about something called MDX. He read the blog post behind the tweet and knew he thought "wow, this could be the perfect solution"
@@ -169,7 +181,13 @@ One day, one of the engineers at the Royal Academy of Content was browsing Twitt
 
 ---
 
-The Kingdom Rejoices
+# 🎉<br/> The Kingdom Rejoices
+
+<Flex>
+<Box width={1/3}>
+content you can tap, pinch, rotate, shake, swipe, flip, rotate & more
+</Box>
+</Flex>
 
 <Notes>
 The engineer stayed up all night coding and built a prototype of a news article with an interactive timeline, and the rest was history.
@@ -177,13 +195,7 @@ The engineer stayed up all night coding and built a prototype of a news article 
 Both the engineers and the content authors fell in love with MDX and started to make content spiced up with components that everyone could enjoy, no matter their age or screen size. Because traffic was up across the board, even the king was happy.
 
 The new content was really engaging. It took full advantage of the capabilities of people's devices, letting them scroll and tap, pinch, rotate, shake, swipe, flip, rotate, watch gifs and videos, and more.
-</Notes>
 
----
-
-Happy Ending
-
-<Notes>
 Don't you just love it when stories have a happy ending?
 
 I bet you're thinking, I want to see some of this MDX. This is a tech conference, I paid good money, I want to see some code. Do y'all want to see some code?
@@ -192,6 +204,8 @@ Ok let's do it. (Put on glasses). You can never be too careful when you let some
 </Notes>
 
 ---
+
+# 🔎
 
 <KingMarkdown />
 
@@ -205,9 +219,14 @@ A-ha! All along, King Markdown was just an JSX component. I embedded it here in 
 
 ---
 
+<JHorizontal>
+<div>
 deck.mdx
-
+</div>
+<div>
 components/KingMarkdown.js
+</div>
+</JHorizontal>
 
 <Notes>
 (navigate with higlighter, not magnifier, do H first then M later)
@@ -275,7 +294,7 @@ MDX Plugins exist for Gatsby, Next.js and much more. Try MDX soon and bring peac
 
 ---
 
-- thank you component, animates in a few seconds
+# 🙏<br/> Thank you!
 
 <Notes>
 Thank you.
