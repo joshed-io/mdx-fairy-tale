@@ -1,7 +1,7 @@
 import React from 'react'
 
-const KingMarkdown = ({ children }) => (
-  <img src="/images/king-markdown.png" />
+const PrincessJavaScript = ({ children }) => (
+  <img src="/images/princess-javascript.png" />
 )
 
-export default KingMarkdown
+export default PrincessJavaScript
