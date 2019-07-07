@@ -1,12 +1,13 @@
 import { Head, Notes } from 'mdx-deck'
 import { Appear } from '@mdx-deck/components'
 import highlight from '@mdx-deck/themes/syntax-highlighter'
-import { yellow as mdxTheme } from '@mdx-deck/themes'
+import { book as mdxTheme } from '@mdx-deck/themes'
+import { Image as MdxImage } from 'mdx-deck'
 import { Split } from '@mdx-deck/layouts'
 
 import AppearOnly from 'components/AppearOnly'
 import Image from 'components/Image'
-import provider from 'components/provider'
+import Provider from 'components/provider'
 import Header from 'components/header'
 import KingMarkdown from 'components/king-markdown'
 import PrincessJavaScript from 'components/princess-javascript'
@@ -17,15 +18,19 @@ export const colors = {
 
 export const theme = {
   // ...highlight,
-  ...provider,
-  // ...mdxTheme,
-  font: 'Nunito, sans-serif',
-  googleFont: 'https://fonts.googleapis.com/css?family=Nunito:300,300i,700',
+  Provider,
+  ...mdxTheme,
+  // font: 'Nunito, sans-serif',
+  // googleFont: 'https://fonts.googleapis.com/css?family=Nunito:300,300i,700',
   colors: {
     text: colors.black,
     link: colors.black,
     code: colors.black,
-    background: 'none' //colors.black
+    // background: colors.black
+  },
+  Slide: {
+    background: 'url(/images/fairy-tale-castle-o25.jpg) no-repeat center center',
+    backgroundSize: 'cover'
   },
   css: {
   },
@@ -67,11 +72,7 @@ export const theme = {
   <link rel='shortcut icon' type='image/png' href='/images/favicon.ico'/>
 </Head>
 
-# 👑 👸
-
-## MDX: content for kings and princesses
-
-# 👸 👑
+# 👑 👸<br/> MDX: content for kings and princesses
 
 ---
 
@@ -94,25 +95,21 @@ export const theme = {
 
 <Notes>
 Hi I’m Josh, a developer advocate formerly at Algolia and now the co-founder of DeveloperMode, where we do developer-relations-as-a-service and get to play with lots of cool tech. Like MDX, which is what I'll talk to you about tonight.
-
-// show images in sequence
 </Notes>
 
 ---
 
 <img src="/images/mdx-logo.svg" css={{ width: "50vw" }}/>
 
-## = Markdown + JSX
+### MDX = Markdown + JSX
 
 <Notes>
-Today I’m going to talk to you about MDX. MDX lets you put JSX components in your markdown documents, making the power of your whole JavaScript app accessible from your content. To show you how MDX can help JAMstack teams, I want to tell you a story. But since case studies can be kinda boring, I'll tell you a fairy tale instead. 
-
-// slide is mdx, jsx in markdown, maybe show code
+MDX lets you put JSX components in your markdown documents, making the power of your whole JavaScript app accessible from your content. To show you how MDX can help JAMstack teams, I want to tell you a story. But since case studies can be kinda boring, I'll tell you a fairy tale instead. 
 </Notes>
 
 ---
 
-## 📜 Once upon a time...
+# 📜<br/> Once upon a time...
 
 <Notes>
 Once upon a time, there was a king named King Markdown.

@@ -8,7 +8,7 @@ const Provider = ({ children, theme, index, slides }) => (
       textDecoration: 'none'
     },
   }}>
-    <div css={{
+    {/* <div css={{
       position: 'absolute',
       width: '100vw',
       height: '100vh',
@@ -23,7 +23,7 @@ const Provider = ({ children, theme, index, slides }) => (
       background: '#FFFFF0',
       opacity: '0.80',
       zIndex: '1',
-    }}></div>
+    }}></div> */}
     <div css={{
       position: 'relative',
       zIndex: 2
@@ -34,6 +34,4 @@ const Provider = ({ children, theme, index, slides }) => (
   </div>
 )
 
-export default {
-  Provider
-}
+export default Provider
