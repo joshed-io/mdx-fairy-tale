@@ -1,9 +1,11 @@
 import { Head, Notes } from 'mdx-deck'
-import { Appear, MdxImage } from '@mdx-deck/components'
+import { Appear } from '@mdx-deck/components'
 import highlight from '@mdx-deck/themes/syntax-highlighter'
 import { yellow as mdxTheme } from '@mdx-deck/themes'
 import { Split } from '@mdx-deck/layouts'
 
+import AppearOnly from 'components/AppearOnly'
+import Image from 'components/Image'
 import provider from 'components/provider'
 import Header from 'components/header'
 import KingMarkdown from 'components/king-markdown'
@@ -17,9 +19,6 @@ export const theme = {
   // ...highlight,
   ...provider,
   // ...mdxTheme,
-  css: {
-    padding: "0 15%"
-  },
   font: 'Nunito, sans-serif',
   googleFont: 'https://fonts.googleapis.com/css?family=Nunito:300,300i,700',
   colors: {
@@ -27,6 +26,8 @@ export const theme = {
     link: colors.black,
     code: colors.black,
     background: 'none' //colors.black
+  },
+  css: {
   },
   code: {
   },
@@ -41,48 +42,75 @@ export const theme = {
   metadata: {
     author: `Josh Dzielak`,
     twitter: `@dzello`,
-    hashtag: `@jamstackconf`,
-    date: `May 28, 2019`,
+    event_twitter: `@jamstackconf`,
+    event_twitter_link: `https://twitter.com/jamstackconf`,
+    date: `July 9, 2019`,
     repository: `https://github.com/developermode/mdx-fairy-tale`
   },
+  components: {
+    img: Image
+  }
 }
 
 <Head>
-  <title>My kingdom for JSX in Markdown</title>
+  <title>MDX: content for kings and princesses</title>
   <meta name='twitter:card' content='summary_large_image' />
   <meta name='twitter:site' content='@dzello' />
-  <meta name='twitter:title' content='My kingdom for JSX in Markdown' />
-  <meta name='twitter:description' content='Once upon a time, King Markdown met Princess JSX...' />
+  <meta name='twitter:title' content='MDX: content for kings and princesses' />
+  <meta name='twitter:description' content='' />
   <meta name='twitter:image' content='https://mdx-fairy-tale.developermode.com/images/mdx-fairy-tale-title-slide.png' />
-  <meta property="og:title" content='My kingdom for JSX in Markdown' />
+  <meta property="og:title" content='MDX: content for kings and princesses' />
   <meta property="og:type" content="website" />
   <meta property="og:url" content='https://mdx-fairy-tale.developermode.com/' />
   <meta property="og:image" content='https://mdx-fairy-tale.developermode.com/images/mdx-fairy-tale-title-slide.png' />
-  <meta property="og:description" content='Once upon a time, King Markdown met Princess JSX...' />
+  <meta property="og:description" content='' />
   <link rel='shortcut icon' type='image/png' href='/images/favicon.ico'/>
 </Head>
 
-## My kingdom for JSX in Markdown
+# 👑 👸
 
-##### by Josh Dzielak
+## MDX: content for kings and princesses
+
+# 👸 👑
+
+---
+
+<Split>
+<h2 style={{ width: '40vw' }}>I'm Josh</h2>
+
+<AppearOnly>
+<div style={{ width: '40vw' }}>
+<Image src="/images/josh-dzielak-profile-2019.jpg" css={{ borderRadius: '50px' }} />
+</div>
+<div style={{ width: '40vw' }}>
+<img src="/images/algolia-logo.png" css={{ }} />
+</div>
+<div style={{ width: '40vw' }}>
+<img src="/images/developermode-logo-black.png" css={{ }} />
+</div>
+</AppearOnly>
+
+</Split>
 
 <Notes>
-Hi I’m Josh, a developer advocate and co-founder of DeveloperMode, where we do developer-relations-as-a-service.
+Hi I’m Josh, a developer advocate formerly at Algolia and now the co-founder of DeveloperMode, where we do developer-relations-as-a-service and get to play with lots of cool tech. Like MDX, which is what I'll talk to you about tonight.
+
+// show images in sequence
 </Notes>
 
 ---
 
-# MDX
+<img src="/images/mdx-logo.svg" css={{ width: "50vw" }}/>
 
 <Notes>
-Today, I’m going to talk to you about MDX. MDX lets you put JSX components in your markdown documents, making the power of your whole JavaScript app accessible from your content. To show you how MDX can help JAMstack teams, I want to tell you a story. But since case studies can be kinda boring, I'll tell you a fairy tale instead. 
+Today I’m going to talk to you about MDX. MDX lets you put JSX components in your markdown documents, making the power of your whole JavaScript app accessible from your content. To show you how MDX can help JAMstack teams, I want to tell you a story. But since case studies can be kinda boring, I'll tell you a fairy tale instead. 
 
 // slide is mdx, jsx in markdown, maybe show code
 </Notes>
 
 ---
 
-## Once upon a time...
+## 📜 Once upon a time...
 
 <Notes>
 Once upon a time, there was a king named King Markdown.
@@ -107,7 +135,7 @@ He's so adamant about having his content his way that he built a Great Wall of T
 <PrincessJavaScript />
 
 <Notes>
-King Markdown has a daughter, Princess JSX (“jessiks”). Not a normal name but she’s not a normal princess.
+King Markdown has a daughter, Princess JavaScript. Not a normal name but she’s not a normal princess.
 
 She writes code and she loves to use many different gestures to interact with her content; to tap, pinch, rotate, shake and swipe.
 
@@ -116,7 +144,7 @@ How'd she learn all that, growing up inside the Great Wall of Text? One night sh
 
 ---
 
-## Struggle
+Struggle
 
 - princess vs. the king
 
@@ -126,7 +154,7 @@ So as you can imagine, there's been a lot of tension in the royal palace, simila
 
 ---
 
-## Royal Academy of Content
+Royal Academy of Content
 
 <Notes>
 The academy's markdown authors wanted to make their content more interactive, but they didn't know how. "There's no way to handle events in markdown", they cried! The front-end engineers wanted to help, but they thought it would be too dangerous to let the markdown authors put arbitrary JavaScript code in their documents.
@@ -134,7 +162,7 @@ The academy's markdown authors wanted to make their content more interactive, bu
 
 ---
 
-## One day
+Then one day...
 
 - show the tweet
 
@@ -144,19 +172,19 @@ One day, one of the engineers at the Royal Academy of Content was browsing Twitt
 
 ---
 
-## The Kingdom Rejoices
+The Kingdom Rejoices
 
 <Notes>
-The engineer stayed up all night coding and built a prototype.
+The engineer stayed up all night coding and built a prototype of a news article with an interactive timeline, and the rest was history.
 
-Both the engineers and the content authors fell in love with MDX and started to make content that everyone could enjoy, no matter their age or screen size. Because traffic was up across the board, even the king was happy.
+Both the engineers and the content authors fell in love with MDX and started to make content spiced up with components that everyone could enjoy, no matter their age or screen size. Because traffic was up across the board, even the king was happy.
 
 The new content was really engaging. It took full advantage of the capabilities of people's devices, letting them scroll and tap, pinch, rotate, shake, swipe, flip, rotate, watch gifs and videos, and more.
 </Notes>
 
 ---
 
-## Happy Ending
+Happy Ending
 
 <Notes>
 Don't you just love it when stories have a happy ending?
@@ -180,9 +208,9 @@ A-ha! All along, King Markdown was just an JSX component. I embedded it here in 
 
 ---
 
-# deck.mdx
+deck.mdx
 
-# components/KingMarkdown.js
+components/KingMarkdown.js
 
 <Notes>
 (navigate with higlighter, not magnifier, do H first then M later)
@@ -197,7 +225,7 @@ The KingMarkdown component exposes some props that make it customizable and reus
 
 <KingMarkdown size="small" action="speak" />
 
-# deck.mdx code on the right
+deck.mdx code on the right
 
 <Notes>
 *change slide, then point at the king*

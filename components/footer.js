@@ -22,7 +22,7 @@ const Footer = ({ index, theme }) => (
     }}
   >
     {/* <li>{index}</li> */}
-    <li><a href={`https://twitter.com/hashtag/${theme.metadata.hashtag}`}>{theme.metadata.hashtag}</a></li>
+    <li><a href={theme.metadata.event_twitter_link}>{theme.metadata.event_twitter}</a></li>
     {/* <li><a href={theme.metadata.repository} style={{ textDecoration: `underline` }}>get the code</a></li> */}
     <li css={{ flexGrow: 1 }}></li>
     {/* <li>{theme.metadata.author}</li> */}

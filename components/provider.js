@@ -28,7 +28,7 @@ const Provider = ({ children, theme, index, slides }) => (
       position: 'relative',
       zIndex: 2
     }}>
-    {children}
+      {children}
     </div>
     <Footer theme={theme} index={index} />
   </div>
