@@ -24,7 +24,7 @@ const Horizontal = ({ width, children, style }) => {
 }
 
 Horizontal.defaultProps = {
-  width: `100vw`
+  width: `95vw`
 }
 
 export default Horizontal

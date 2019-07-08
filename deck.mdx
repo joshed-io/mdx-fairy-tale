@@ -1,3 +1,4 @@
+import React from 'react'
 import {
   LiveProvider,
   LiveEditor,
@@ -20,6 +21,7 @@ import Provider from './components/Provider'
 import Header from './components/Header'
 import JSplit from './components/Split'
 import JHorizontal from './components/Horizontal'
+import { Caption } from './components/Styled'
 
 import Castle from './components/Castle'
 import KingMarkdown from './components/KingMarkdown'
@@ -27,6 +29,7 @@ import PrincessJavaScript from './components/PrincessJavaScript'
 
 import fairyTale from './themes/fairy-tale'
 import * as snippets from './snippets/index'
+
 
 export const theme = {
   Provider,
@@ -71,9 +74,15 @@ export const theme = {
 </div>
 
 <AppearOnly>
-<Image src="/images/josh-dzielak-crown.png" css={{ width: '30vw' }} />
-<Image src="/images/algolia-logo.png" />
-<Image src="/images/developermode-logo-2.png" />
+  <Image src="/images/josh-dzielak-crown.png" css={{ width: '30vw', borderRadius: '250px' }} />
+  <div>
+    <Image src="/images/algolia-logo.png" />
+    <Caption>formerly</Caption>
+  </div>
+  <div>
+    <Image src="/images/developermode-logo-2.png" />
+    <Caption>co-founder</Caption>
+  </div>
 </AppearOnly>
 
 <div>
@@ -260,7 +269,7 @@ todo: make the code appear over the king, or as a bubble
 ---
 
 <AppearOnly>
-<JHorizontal width="80vw">
+<JHorizontal>
   <div>
     <KingMarkdown height="50vh" hoverable={false} />
   </div>
@@ -272,7 +281,7 @@ todo: make the code appear over the king, or as a bubble
     </CodeWrapper>
   </div>
 </JHorizontal>
-<JHorizontal width="80vw">
+<JHorizontal>
   <div>
     <KingMarkdown height="75vh" hoverable={false} />
   </div>
@@ -284,7 +293,7 @@ todo: make the code appear over the king, or as a bubble
     </CodeWrapper>
   </div>
 </JHorizontal>
-<JHorizontal width="95vw">
+<JHorizontal>
   <div>
     <KingMarkdown height="75vh" src="/images/king-markdown-2.png" hoverable={false} />
   </div>
@@ -310,9 +319,7 @@ todo: add the live coding part; up and down could be DOM elements
 
 ---
 
-<LiveProvider code={`<KingMarkdown 
-  height="50vh"
-  src="/images/king-markdown-1.png" />`}
+<LiveProvider code={snippets.liveCode}
     scope={{ KingMarkdown, PrincessJavaScript }}>
   <JHorizontal width="90vw">
     <LivePreview />

@@ -1,3 +1,7 @@
+export const liveCode = `<KingMarkdown 
+    src="/images/king-markdown-1.png"
+    height="50vh" />`
+
 export const mdx1 = `
 import KingMarkdown from 'components/KingMarkdown.js'
 
@@ -23,9 +27,10 @@ This king has a taller height.
 export const mdx3 = `
 import KingMarkdown from 'components/KingMarkdown.js'
 
-# Meet King Markdown
-
-<KingMarkdown height="75vh" src="/images/king-markdown-2.png" />
+# Meet King Markdown 
+<KingMarkdown
+  height="75vh"
+  src="/images/king-markdown-2.png" />
 
 This king has a height and image specified.
 
