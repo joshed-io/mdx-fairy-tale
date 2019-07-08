@@ -16,14 +16,18 @@ export default class Character extends React.Component {
   }
 
   handleMouseEnter(event) {
-    this.setState({ active: true });
+    if (this.props.hoverable) {
+      this.setState({ active: true });
+    }
   }
 
   handleMouseLeave(event) {
-    this.setState({ 
-      active: false, 
-      // codeVisible: false  // testing only, otherwise can lose behind mag glass
-    });
+    if (this.props.hoverable) {
+      this.setState({ 
+        active: false, 
+        // codeVisible: false  // testing only, otherwise can lose behind mag glass
+      });
+    }
   }
 
   handleClick(event) {
@@ -85,6 +89,7 @@ export default class Character extends React.Component {
 }
 
 Character.defaultProps = {
+  hoverable: true,
   height: `50vh`,
   src: ``,
   activeSrc: ``

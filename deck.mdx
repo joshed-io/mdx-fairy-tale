@@ -62,7 +62,7 @@ export const theme = {
 </div>
 
 <AppearOnly>
-<Image src="/images/josh-dzielak-profile-2019.jpg" css={{ width: '30vw', borderRadius: '50px' }} />
+<Image src="/images/josh-dzielak-crown.png" css={{ width: '30vw' }} />
 <Image src="/images/algolia-logo.png" />
 <Image src="/images/developermode-logo-2.png" />
 </AppearOnly>
@@ -253,7 +253,7 @@ todo: make the code appear over the king, or as a bubble
 <AppearOnly>
 <JHorizontal width="80vw">
   <div>
-    <KingMarkdown height="50vh" />
+    <KingMarkdown height="50vh" hoverable={false} />
   </div>
   <div>
     <Code style={{ fontSize: '22px' }}>
@@ -263,7 +263,7 @@ todo: make the code appear over the king, or as a bubble
 </JHorizontal>
 <JHorizontal width="80vw">
   <div>
-    <KingMarkdown height="75vh" />
+    <KingMarkdown height="75vh" hoverable={false} />
   </div>
   <div>
     <Code style={{ fontSize: '22px' }}>
@@ -273,7 +273,7 @@ todo: make the code appear over the king, or as a bubble
 </JHorizontal>
 <JHorizontal width="95vw">
   <div>
-    <KingMarkdown height="75vh" src="/images/king-markdown-2.png" />
+    <KingMarkdown height="75vh" src="/images/king-markdown-2.png" hoverable={false} />
   </div>
   <div>
     <Code style={{ fontSize: '22px' }}>
@@ -295,12 +295,12 @@ todo: add the live coding part; up and down could be DOM elements
 
 ---
 
-<Castle>
-  <JHorizontal>
-    <KingMarkdown />
-    <PrincessJavaScript />
-  </JHorizontal>
-</Castle>
+<JHorizontal>
+  <KingMarkdown hoverable={false} />
+  <PrincessJavaScript hoverable={false} src="/images/princess-javascript-1-left.png" />
+  <Castle>
+  </Castle>
+</JHorizontal>
 
 <Notes>
 But let's take it a bit further. Can we compose an entire scene with MDX? Yes. MDX lets us nest and compose our JSX components, just like we're used to.
