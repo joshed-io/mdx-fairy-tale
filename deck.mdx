@@ -1,11 +1,20 @@
+import {
+  LiveProvider,
+  LiveEditor,
+  LiveError,
+  LivePreview
+} from 'react-live'
+
 import { Head, Notes, Image as MdxImage  } from 'mdx-deck'
 import { Appear } from '@mdx-deck/components'
 import { Split, Horizontal } from '@mdx-deck/layouts'
 import Box from '@mdx-deck/layouts/src/Box'
 import Flex from '@mdx-deck/layouts/src/Flex'
+import prismTheme from 'prism-react-renderer/themes/github'
 
 import AppearOnly from './components/AppearOnly'
 import Code from './components/Code'
+import CodeWrapper from './components/CodeWrapper'
 import Image from './components/Image'
 import Provider from './components/Provider'
 import Header from './components/Header'
@@ -256,9 +265,11 @@ todo: make the code appear over the king, or as a bubble
     <KingMarkdown height="50vh" hoverable={false} />
   </div>
   <div>
-    <Code style={{ fontSize: '22px' }}>
-      {snippets.mdx1}
-    </Code>
+    <CodeWrapper>
+      <Code>
+        {snippets.mdx1}
+      </Code>
+    </CodeWrapper>
   </div>
 </JHorizontal>
 <JHorizontal width="80vw">
@@ -266,9 +277,11 @@ todo: make the code appear over the king, or as a bubble
     <KingMarkdown height="75vh" hoverable={false} />
   </div>
   <div>
-    <Code style={{ fontSize: '22px' }}>
+    <CodeWrapper>
+    <Code>
       {snippets.mdx2}
     </Code>
+    </CodeWrapper>
   </div>
 </JHorizontal>
 <JHorizontal width="95vw">
@@ -276,9 +289,11 @@ todo: make the code appear over the king, or as a bubble
     <KingMarkdown height="75vh" src="/images/king-markdown-2.png" hoverable={false} />
   </div>
   <div>
-    <Code style={{ fontSize: '22px' }}>
+    <CodeWrapper>
+    <Code>
       {snippets.mdx3}
     </Code>
+    </CodeWrapper>
   </div>
 </JHorizontal>
 </AppearOnly>
@@ -292,6 +307,20 @@ I hope I've made this presentation a little more fun and engaging because we can
 
 todo: add the live coding part; up and down could be DOM elements
 </Notes>
+
+---
+
+<LiveProvider code={`<KingMarkdown 
+  height="50vh"
+  src="/images/king-markdown-1.png" />`}
+    scope={{ KingMarkdown, PrincessJavaScript }}>
+  <JHorizontal width="90vw">
+    <LivePreview />
+    <CodeWrapper>
+      <LiveEditor style={{ fontFamily: 'Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace', fontSize: '22px', lineHeight: "42px", background: 'none', caretColor: '#0a0a0a' }} theme={prismTheme} />
+    </CodeWrapper>
+  </JHorizontal>
+</LiveProvider>
 
 ---
 

@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import Code from "./Code";
+import CodeWrapper from "./CodeWrapper";
 
 export default class Character extends React.Component {
   constructor(props) {
@@ -49,7 +50,9 @@ export default class Character extends React.Component {
               zoom: '0.5'
             }}
           />
-          <Code>{this.props.codeSnippet}</Code>
+          <CodeWrapper>
+            <Code fontSize="18px">{this.props.codeSnippet}</Code>
+          </CodeWrapper>
         </div>
       );
     } else {

@@ -8,11 +8,11 @@
     "help": "mdx-deck"
   },
   "devDependencies": {
-    "mdx-deck": "^2.5"
-  },
-  "dependencies": {
-    "prism-react-renderer": "^0.1.6",
+    "mdx-deck": "^2.5",
+    "prism-react-renderer": "^0.1.7",
+    "react-live": "^2.1.2",
     "react-syntax-highlighter": "^11.0.1",
     "styled-components": "^4.2.0"
-  }
+  },
+  "dependencies": {}
 }

@@ -17,8 +17,9 @@ export default {
     margin: 0,
     margin: '0.2em 0'
   },
-  pre: {
-    // fontSize: `18px`,
-    // lineHeight: `22px`,
+  css: {
+    textarea: {
+      outline: '0'
+    },
   },
 }
