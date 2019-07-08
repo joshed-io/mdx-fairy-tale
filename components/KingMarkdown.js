@@ -18,7 +18,7 @@ export default class KingMarkdown extends React.Component {
   render() {
     return (
       <div onMouseEnter={this.handleHover} onMouseLeave={this.handleHover}>
-        <img src="/images/king-markdown.png" />
+        <img src="/images/king-markdown.png" css={{ height: '25vh' }} />
         {this.state.visible ? <div /> : <div />}
       </div>
     );
