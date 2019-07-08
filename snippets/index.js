@@ -1,22 +1,37 @@
-export const smallKingSnippet = `
-import KingMarkdown from 'components/KingMarkdown.js'
-
-# Meet King Markdown
-
-<KingMarkdown height="25vh" />
-
-`
-
-export const bigKingSnippet = `
+export const mdx1 = `
 import KingMarkdown from 'components/KingMarkdown.js'
 
 # Meet King Markdown
 
 <KingMarkdown height="50vh" />
 
+The king likes his content text-heavy.
+
 `
 
-export const snippetKingMarkdown =  `
+export const mdx2 = `
+import KingMarkdown from 'components/KingMarkdown.js'
+
+# Meet King Markdown
+
+<KingMarkdown height="75vh" />
+
+The king likes his content text-heavy.
+
+`
+
+export const mdx3 = `
+import KingMarkdown from 'components/KingMarkdown.js'
+
+# Meet King Markdown
+
+<KingMarkdown height="75vh" src="/images/king-markdown-2.png" />
+
+The king likes his content text-heavy.
+
+`
+
+export const jsx1 =  `
 import React from "react";
 
 export default class KingMarkdown extends React.Component {

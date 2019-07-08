@@ -6,6 +6,5 @@ export default class KingMarkdown extends Character {
 
 KingMarkdown.defaultProps = {
   ...Character.defaultProps,
-  src: `/images/king-markdown-1.png`,
-  activeSrc: `/images/king-markdown-2.png`,
+  src: `/images/king-markdown-1.png`
 }

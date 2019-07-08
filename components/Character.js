@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import Code from './Code'
+import Code from "./Code";
 
 export default class Character extends React.Component {
   constructor(props) {
@@ -20,29 +20,52 @@ export default class Character extends React.Component {
   }
 
   handleMouseLeave(event) {
-    this.setState({ active: false });
+    this.setState({ 
+      active: false, 
+      // codeVisible: false  // testing only, otherwise can lose behind mag glass
+    });
   }
 
   handleClick(event) {
-    this.setState({ active: true });
+    this.setState({ codeVisible: true });
   }
 
   renderCharacter() {
     if (this.state.codeVisible && this.props.codeSnippet) {
       return (
-        <Code>{this.props.codeSnippet}</Code>
+        <div css={{ position: "relative" }}>
+          <Image
+            src={this.props.activeSrc || this.props.src}
+            css={{
+              height: this.props.height,
+              position: "absolute",
+              opacity: "0.5",
+              bottom: "0",
+              left: "0"
+            }}
+          />
+          <Code>{this.props.codeSnippet}</Code>
+        </div>
       );
     } else {
-      if (this.state.active) {
-        return (<ActiveImage
-          src={this.props.activeSrc}
-          css={{ height: this.props.height }}
-        />)
+      if (this.state.active && this.props.activeSrc) {
+        return (
+          <Image
+            src={this.props.activeSrc}
+            css={{ height: this.props.height }}
+          />
+        );
+      } else if (this.state.active) {
+        return (
+          <ZoomedImage
+            src={this.props.src}
+            css={{ height: this.props.height }}
+          />
+        );
       } else {
-        return (<Image
-          src={this.props.src}
-          css={{ height: this.props.height }}
-        />)
+        return (
+          <Image src={this.props.src} css={{ height: this.props.height }} />
+        );
       }
     }
   }
@@ -64,9 +87,14 @@ Character.defaultProps = {
   height: `50vh`,
   src: ``,
   activeSrc: ``
+};
+
+const Image = styled.img`
+`;
+
+const ZoomedImage = styled(Image)`
+zoom: 1.5;
+:hover {
+  transition: all .2s ease-in-out;
 }
-
-const Image = styled.img``;
-
-const ActiveImage = styled(Image)`
 `;

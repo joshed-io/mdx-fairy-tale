@@ -17,7 +17,7 @@ import KingMarkdown from 'components/KingMarkdown'
 import PrincessJavaScript from 'components/PrincessJavaScript'
 
 import fairyTale from 'themes/fairy-tale'
-import { smallKingSnippet, bigKingSnippet, snippetKingMarkdown } from 'snippets/snippets-mdx'
+import * as snippets from 'snippets/index'
 
 export const theme = {
   Provider,
@@ -91,7 +91,7 @@ MDX lets you put JSX components in your markdown documents, making the power of 
 
 ---
 
-<img src="/images/awesome-stacks-gatsby-screenshot.png" style={{ height: "50vw" }} />
+<img src="/images/awesome-stacks-gatsby-screenshot.png" style={{ height: "45vw", border: "1px solid #cacaca" }} />
 
 <Notes>
 I first used MDX when building an open source project Awesome Stacks. Awesome Stacks is like an awesome list for stacks on steroids, because an entire Gatsby site is built from the README content. Each awesome stack gets its own page that shows information about each tool in the stack pulled from the GitHub and StackShare GraphQL APIs. I used MDX to allow these GitHub and StackShare tool cards to be shown inline with the content, like you see here for Gatsby, Cloud Firestore and Netlify.
@@ -223,7 +223,9 @@ Don't you just love it when stories have a happy ending?
 
 ---
 
-# 💻 Let's see some code
+# 💻
+
+# Let's see some code
 
 <Notes>
 
@@ -236,7 +238,7 @@ Thankfully I brought the Royal Sceptre with me today, which is capable of inspec
 
 ---
 
-<KingMarkdown codeSnippet={snippetKingMarkdown} />
+<KingMarkdown codeSnippet={snippets.jsx1} />
 
 <Notes>
 Searching, searching, searching... a ha!
@@ -249,30 +251,36 @@ todo: make the code appear over the king, or as a bubble
 ---
 
 <AppearOnly>
-<div>
-  <JHorizontal>
-    <div>
-      <KingMarkdown height="25vh" />
-    </div>
-    <div>
-      <Code style={{ fontSize: '22px' }}>
-        {smallKingSnippet}
-      </Code>
-    </div>
-  </JHorizontal>
-</div>
-<div>
-  <JHorizontal>
-    <div>
-      <KingMarkdown height="50vh" />
-    </div>
-    <div>
-      <Code style={{ fontSize: '22px' }}>
-        {bigKingSnippet}
-      </Code>
-    </div>
-  </JHorizontal>
-</div>
+<JHorizontal width="80vw">
+  <div>
+    <KingMarkdown height="50vh" />
+  </div>
+  <div>
+    <Code style={{ fontSize: '22px' }}>
+      {snippets.mdx1}
+    </Code>
+  </div>
+</JHorizontal>
+<JHorizontal width="80vw">
+  <div>
+    <KingMarkdown height="75vh" />
+  </div>
+  <div>
+    <Code style={{ fontSize: '22px' }}>
+      {snippets.mdx2}
+    </Code>
+  </div>
+</JHorizontal>
+<JHorizontal width="95vw">
+  <div>
+    <KingMarkdown height="75vh" src="/images/king-markdown-2.png" />
+  </div>
+  <div>
+    <Code style={{ fontSize: '22px' }}>
+      {snippets.mdx3}
+    </Code>
+  </div>
+</JHorizontal>
 </AppearOnly>
 
 <Notes>
