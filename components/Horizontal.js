@@ -2,7 +2,7 @@ import React from 'react'
 import Box from '@mdx-deck/layouts/src/Box'
 import Flex from '@mdx-deck/layouts/src/Flex'
 
-const Horizontal = ({ children }) => {
+const Horizontal = ({ width, children }) => {
   const kids = React.Children.toArray(children)
 
   return (
@@ -10,7 +10,7 @@ const Horizontal = ({ children }) => {
       css={{
         alignItems: 'center',
         height: '100%',
-        width: '100vw',
+        width: width
       }}
     >
       {kids.map(child => (
@@ -20,6 +20,10 @@ const Horizontal = ({ children }) => {
       ))}
     </Flex>
   )
+}
+
+Horizontal.defaultProps = {
+  width: `100vw`
 }
 
 export default Horizontal

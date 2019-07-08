@@ -15,7 +15,7 @@ export default {
   },
   heading: {
     margin: 0,
-    marginBottom: '0.2em'
+    margin: '0.2em 0'
   },
   pre: {
     // fontSize: `18px`,

@@ -1,26 +1,11 @@
 import React from "react";
+import Character from './Character'
 
-export default class KingMarkdown extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      visible: true
-    };
-    this.handleHover = this.handleHover.bind(this);
-  }
+export default class KingMarkdown extends Character {
+}
 
-  handleHover(event) {
-    this.setState({
-      visible: !this.state.visible
-    });
-  }
-
-  render() {
-    return (
-      <div onMouseEnter={this.handleHover} onMouseLeave={this.handleHover}>
-        <img src="/images/king-markdown.png" css={{ height: this.props.height || '40vh' }} />
-        {this.state.visible ? <div /> : <div />}
-      </div>
-    );
-  }
+KingMarkdown.defaultProps = {
+  ...Character.defaultProps,
+  src: `/images/king-markdown-1.png`,
+  activeSrc: `/images/king-markdown-2.png`,
 }

@@ -1,7 +1,11 @@
 import React from 'react'
+import Character from './Character'
 
-const PrincessJavaScript = ({ children }) => (
-  <img src="/images/princess-javascript.png" css={{ height: '40vh' }} />
-)
+export default class PrincessJavaScript extends Character {
+}
 
-export default PrincessJavaScript
+PrincessJavaScript.defaultProps = {
+  ...Character.defaultProps,
+  src: `/images/princess-javascript-1.png`,
+  activeSrc: `/images/princess-javascript-2.png`
+}

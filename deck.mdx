@@ -56,16 +56,22 @@ export const theme = {
 
 ---
 
-<JSplit>
-<h1>&lt;Josh /&gt;</h1>
+<JHorizontal>
+<div>
+<h1>&lt;Josh &gt;</h1>
+</div>
 
 <AppearOnly>
 <Image src="/images/josh-dzielak-profile-2019.jpg" css={{ width: '30vw', borderRadius: '50px' }} />
 <Image src="/images/algolia-logo.png" />
-<Image src="/images/developermode-logo-black.png" />
+<Image src="/images/developermode-logo-2.png" />
 </AppearOnly>
 
-</JSplit>
+<div>
+<h1>&lt;/Josh &gt;</h1>
+</div>
+
+</JHorizontal>
 
 <Notes>
 Hi I’m Josh, a developer advocate formerly at Algolia and now the co-founder of DeveloperMode, where we do developer-relations-as-a-service and get to play with lots of cool tech. Like MDX, which is what I want to talk to you about tonight.
@@ -149,10 +155,10 @@ todo - add gestures gif and jamstack devs
 
 ---
 
-<JHorizontal>
-<PrincessJavaScript />
-<h1>😖</h1>
-<KingMarkdown />
+<JHorizontal width='70vw'>
+<KingMarkdown src="/images/king-markdown-3.png" />
+<h1>⚔️</h1>
+<PrincessJavaScript src="/images/princess-javascript-3-left.png" />
 </JHorizontal>
 
 <Notes>
@@ -217,7 +223,7 @@ Don't you just love it when stories have a happy ending?
 
 ---
 
-# Let's see some code
+# 💻 Let's see some code
 
 <Notes>
 
@@ -230,34 +236,12 @@ Thankfully I brought the Royal Sceptre with me today, which is capable of inspec
 
 ---
 
-<AppearOnly>
-<div>
-  <KingMarkdown />
-</div>
-<div style={{ display: 'flex', flexDirection: 'row', width: '100vw', height: '100%' }}>
-  <div style={{ width: '33%' }}>
-    <KingMarkdown />
-  </div>
-  <div style={{ width: '66%' }}>
-    <Code>
-      {snippetKingMarkdown}
-    </Code>
-  </div>
-</div>
-</AppearOnly>
+<KingMarkdown codeSnippet={snippetKingMarkdown} />
 
 <Notes>
 Searching, searching, searching... a ha!
-*put highlight on king, or trigger secondary keystroke*
-*code appears*
 
-The scepter has found some code after all. All along, King Markdown was just a React component.
-
-**switch to magnify and move sceptre closer**
-
-Like most React components, it accepts props, has event handlers, and renders some DOM, in this case an image.
-
-This component is actually embedded here in my slides, for real. The slides are written in MDX using a really great framework called mdx-deck. 
+The scepter has found some code after all. All along, King Markdown was just a React component. rike most React components, it accepts props, has event handlers, and renders some DOM, in this case an image. This component is actually embedded here in my slides, for real. The slides are written in MDX using a really great framework called mdx-deck. 
 
 todo: make the code appear over the king, or as a bubble
 </Notes>
