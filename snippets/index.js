@@ -5,7 +5,7 @@ import KingMarkdown from 'components/KingMarkdown.js'
 
 <KingMarkdown height="50vh" />
 
-The king likes his content text-heavy.
+This king has a height property declared. 
 
 `
 
@@ -16,7 +16,7 @@ import KingMarkdown from 'components/KingMarkdown.js'
 
 <KingMarkdown height="75vh" />
 
-The king likes his content text-heavy.
+This king has a taller height.
 
 `
 
@@ -27,7 +27,7 @@ import KingMarkdown from 'components/KingMarkdown.js'
 
 <KingMarkdown height="75vh" src="/images/king-markdown-2.png" />
 
-The king likes his content text-heavy.
+This king has a height and image specified.
 
 `
 
