@@ -32,7 +32,7 @@ import KingMarkdown from 'components/KingMarkdown.js'
   height="75vh"
   src="/images/king-markdown-2.png" />
 
-This king has a height and image specified.
+This king has a height and image declared.
 
 `
 
