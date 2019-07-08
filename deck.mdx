@@ -60,7 +60,7 @@ export const theme = {
 <h1>&lt;Josh /&gt;</h1>
 
 <AppearOnly>
-<Image src="/images/josh-dzielak-profile-2019.jpg" css={{ borderRadius: '50px' }} />
+<Image src="/images/josh-dzielak-profile-2019.jpg" css={{ width: '30vw', borderRadius: '50px' }} />
 <Image src="/images/algolia-logo.png" />
 <Image src="/images/developermode-logo-black.png" />
 </AppearOnly>
@@ -69,6 +69,8 @@ export const theme = {
 
 <Notes>
 Hi I’m Josh, a developer advocate formerly at Algolia and now the co-founder of DeveloperMode, where we do developer-relations-as-a-service and get to play with lots of cool tech. Like MDX, which is what I want to talk to you about tonight.
+
+todo - transitions
 </Notes>
 
 ---
@@ -83,16 +85,14 @@ MDX lets you put JSX components in your markdown documents, making the power of 
 
 ---
 
-# Awesome Stacks
-
-<img src="/images/awesome-stacks-logo.svg" />
+<img src="/images/awesome-stacks-gatsby-screenshot.png" style={{ height: "50vw" }} />
 
 <Notes>
-I first used MDX when building an open source project Awesome Stacks. Awesome Stacks is like an awesome list for stacks on steroids, because an entire Gatsby site is built from the README content. Each awesome stack gets its own page that shows information about each tool in the stack pulled from the GitHub and StackShare GraphQL APIs. I used MDX to allow these GitHub and StackShare tool cards to be shown inline with the content.
+I first used MDX when building an open source project Awesome Stacks. Awesome Stacks is like an awesome list for stacks on steroids, because an entire Gatsby site is built from the README content. Each awesome stack gets its own page that shows information about each tool in the stack pulled from the GitHub and StackShare GraphQL APIs. I used MDX to allow these GitHub and StackShare tool cards to be shown inline with the content, like you see here for Gatsby, Cloud Firestore and Netlify.
 
 To help you learn more about MDX and how it can help JAMstack teams, I want to tell you a story. But since case studies can be kinda boring, and we're at a pub, I'll tell you a fairy tale instead. 
 
-todo: screenshot and show GitHub component syntax; awesomestacks.dev
+todo: add images for GitHub component, circle components in image
 </Notes>
 
 ---
@@ -121,7 +121,9 @@ King Markdown loved text-heavy, long-form content. Paragraph after paragraph, mu
 
 The only gestures he knows are scrolling and turning pages.
 
-He's so adamant about having his content his way that he tried to build a Great Wall of Text at the kingdom's southern border, but since no one in Congress supported it and it was a perfectly stupid idea, the King never got the money for his wall and it was never built.
+He's so adamant about having his content his way that he tried to build a Great Wall of Text at the kingdom's southern border, but no one thought it was a good idea and he never got the money to do it.
+
+todo - add scrolling and wall images
 </Notes>
 
 ---
@@ -141,6 +143,8 @@ King Markdown has a daughter, Princess JavaScript. Not a normal name but she’s
 She writes code and she loves to use many different gestures to interact with her content; to tap, pinch, rotate, shake and swipe.
 
 How'd she learn all that, growing up around so much markdown? One night she snuck out of the kingdom and visited other kingdoms where JAMstack developers live, discovering interactive data viz and visual storytelling. Ever since then, she has been tirelessly advocating to bring this kind of content back into her own kingdom.
+
+todo - add gestures gif and jamstack devs
 </Notes>
 
 ---
@@ -209,6 +213,13 @@ Both the engineers and the content authors fell in love with MDX and started to 
 The new content was really engaging. It took full advantage of the capabilities of people's devices, letting them scroll and tap, pinch, rotate, shake, swipe, flip, rotate, watch gifs and videos, and more.
 
 Don't you just love it when stories have a happy ending?
+</Notes>
+
+---
+
+# Let's see some code
+
+<Notes>
 
 I bet you're thinking, I want to see some of this MDX. This is a tech conference, I paid good money, I want to see some code. Do y'all want to see some code?
 
@@ -221,7 +232,7 @@ Thankfully I brought the Royal Sceptre with me today, which is capable of inspec
 
 <AppearOnly>
 <div>
-  <KingMarkdown height="25vh" />
+  <KingMarkdown />
 </div>
 <div style={{ display: 'flex', flexDirection: 'row', width: '100vw', height: '100%' }}>
   <div style={{ width: '33%' }}>
