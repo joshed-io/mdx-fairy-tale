@@ -1,11 +1,12 @@
 import React from 'react'
 import styled from '@emotion/styled'
 
-const Image = ({ src, css, width }) => (
+const Image = ({ src, css, width, style }) => (
   <StyledImage
     src={src}
     width={width}
     css={css}
+    style={style}
   />
 )
 

@@ -14,11 +14,11 @@ const Footer = ({ index, theme }) => (
       margin: 16,
       color: theme.colors.text,
       listStyleType: 'none',
-      opacity: 0.75,
+      opacity: 0.50,
       zIndex: 3,
       li: {
         padding: 8,
-        fontSize: '18px'
+        fontSize: '22px'
       },
       a: {
         color: theme.colors.text,
