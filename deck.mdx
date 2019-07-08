@@ -5,14 +5,19 @@ import Box from '@mdx-deck/layouts/src/Box'
 import Flex from '@mdx-deck/layouts/src/Flex'
 
 import AppearOnly from 'components/AppearOnly'
+import Code from 'components/Code'
 import Image from 'components/Image'
 import Provider from 'components/Provider'
 import Header from 'components/Header'
 import JSplit from 'components/Split'
 import JHorizontal from 'components/Horizontal'
+
+import Castle from 'components/Castle'
 import KingMarkdown from 'components/KingMarkdown'
 import PrincessJavaScript from 'components/PrincessJavaScript'
+
 import fairyTale from 'themes/fairy-tale'
+import { smallKingSnippet, bigKingSnippet, snippetKingMarkdown } from 'snippets/snippets-mdx'
 
 export const theme = {
   Provider,
@@ -63,7 +68,7 @@ export const theme = {
 </JSplit>
 
 <Notes>
-Hi I’m Josh, a developer advocate formerly at Algolia and now the co-founder of DeveloperMode, where we do developer-relations-as-a-service and get to play with lots of cool tech. Like MDX, which is what I'll talk to you about tonight.
+Hi I’m Josh, a developer advocate formerly at Algolia and now the co-founder of DeveloperMode, where we do developer-relations-as-a-service and get to play with lots of cool tech. Like MDX, which is what I want to talk to you about tonight.
 </Notes>
 
 ---
@@ -73,7 +78,21 @@ Hi I’m Josh, a developer advocate formerly at Algolia and now the co-founder o
 ## MDX = Markdown + JSX
 
 <Notes>
-MDX lets you put JSX components in your markdown documents, making the power of your whole JavaScript app accessible from your content. To show you how MDX can help JAMstack teams, I want to tell you a story. But since case studies can be kinda boring, I'll tell you a fairy tale instead. 
+MDX lets you put JSX components in your markdown documents, making the power of your whole JavaScript app accessible from your content.
+</Notes>
+
+---
+
+# Awesome Stacks
+
+<img src="/images/awesome-stacks-logo.svg" />
+
+<Notes>
+I first used MDX when building an open source project Awesome Stacks. Awesome Stacks is like an awesome list for stacks on steroids, because an entire Gatsby site is built from the README content. Each awesome stack gets its own page that shows information about each tool in the stack pulled from the GitHub and StackShare GraphQL APIs. I used MDX to allow these GitHub and StackShare tool cards to be shown inline with the content.
+
+To help you learn more about MDX and how it can help JAMstack teams, I want to tell you a story. But since case studies can be kinda boring, and we're at a pub, I'll tell you a fairy tale instead. 
+
+todo: screenshot and show GitHub component syntax; awesomestacks.dev
 </Notes>
 
 ---
@@ -88,7 +107,7 @@ Once upon a time, there was a king named King Markdown.
 
 ---
 
-<div><KingMarkdown /></div>
+<KingMarkdown />
 
 ## King Markdown
 
@@ -102,12 +121,12 @@ King Markdown loved text-heavy, long-form content. Paragraph after paragraph, mu
 
 The only gestures he knows are scrolling and turning pages.
 
-He's so adamant about having his content his way that he built a Great Wall of Text around the kingdom, even though everyone opposed it.
+He's so adamant about having his content his way that he tried to build a Great Wall of Text at the kingdom's southern border, but since no one in Congress supported it and it was a perfectly stupid idea, the King never got the money for his wall and it was never built.
 </Notes>
 
 ---
 
-<div><PrincessJavaScript /></div>
+<PrincessJavaScript />
 
 ## Princess JavaScript
 
@@ -121,7 +140,7 @@ King Markdown has a daughter, Princess JavaScript. Not a normal name but she’s
 
 She writes code and she loves to use many different gestures to interact with her content; to tap, pinch, rotate, shake and swipe.
 
-How'd she learn all that, growing up inside the Great Wall of Text? One night she snuck out of the kingdom and visited other kingdoms where JAMstack developers live, discovering interactive data viz and visual storytelling. Ever since then, she has been tirelessly advocating to bring this kind of content back into her own kingdom.
+How'd she learn all that, growing up around so much markdown? One night she snuck out of the kingdom and visited other kingdoms where JAMstack developers live, discovering interactive data viz and visual storytelling. Ever since then, she has been tirelessly advocating to bring this kind of content back into her own kingdom.
 </Notes>
 
 ---
@@ -133,7 +152,7 @@ How'd she learn all that, growing up inside the Great Wall of Text? One night sh
 </JHorizontal>
 
 <Notes>
-So as you can imagine, there's been a lot of tension in the royal palace, similar to what some of you may have even seen in your content teams. The kingdom's content experts, known as the Royal Academy of Content, were struggling to please both king and princess.
+So as you can imagine, there's been a lot of tension in the royal palace, similar to what some of you may have even seen in your content teams. The kingdom's content experts, known as the Royal Academy of Content, were struggling to please both king and princess, and they were losing traffic to other kingdoms.
 </Notes>
 
 ---
@@ -163,6 +182,8 @@ The academy's markdown authors wanted to make their content more interactive, bu
 
 <Notes>
 One day, one of the engineers at the Royal Academy of Content was browsing Twitter and saw a tweet about something called MDX. He read the blog post behind the tweet and knew he thought "wow, this could be the perfect solution"
+
+The engineer stayed up all night coding and built a prototype of a news article with an interactive timeline, and the rest was history.
 </Notes>
 
 ---
@@ -170,6 +191,8 @@ One day, one of the engineers at the Royal Academy of Content was browsing Twitt
 # 🎉
 
 # The Kingdom Rejoices
+
+maybe a before / after MDX here showing what gestures are supported
 
 <Flex>
 <Box width={1/3}>
@@ -181,8 +204,6 @@ GIF or image of new content
 </Flex>
 
 <Notes>
-The engineer stayed up all night coding and built a prototype of a news article with an interactive timeline, and the rest was history.
-
 Both the engineers and the content authors fell in love with MDX and started to make content spiced up with components that everyone could enjoy, no matter their age or screen size. Because traffic was up across the board, even the king was happy.
 
 The new content was really engaging. It took full advantage of the capabilities of people's devices, letting them scroll and tap, pinch, rotate, shake, swipe, flip, rotate, watch gifs and videos, and more.
@@ -192,104 +213,130 @@ Don't you just love it when stories have a happy ending?
 I bet you're thinking, I want to see some of this MDX. This is a tech conference, I paid good money, I want to see some code. Do y'all want to see some code?
 
 Ok let's do it. (Put on glasses). You can never be too careful when you let someone else see your code.
+
+Thankfully I brought the Royal Sceptre with me today, which is capable of inspecting code at a distance. It is indeed a prop made to inspect props. Let's see if the Royal Sceptre can detect some components on this slide.
 </Notes>
 
 ---
 
-<JHorizontal>
-<div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-<KingMarkdown />
-<code>
-&lt;KingMarkdown /&gt;
-</code>
-</div>
+<AppearOnly>
 <div>
-<Box css={{ }}>
-</Box>
+  <KingMarkdown height="25vh" />
 </div>
-</JHorizontal>
+<div style={{ display: 'flex', flexDirection: 'row', width: '100vw', height: '100%' }}>
+  <div style={{ width: '33%' }}>
+    <KingMarkdown />
+  </div>
+  <div style={{ width: '66%' }}>
+    <Code>
+      {snippetKingMarkdown}
+    </Code>
+  </div>
+</div>
+</AppearOnly>
 
 <Notes>
-Abracodabra!
-*point sceptre at screen*
+Searching, searching, searching... a ha!
+*put highlight on king, or trigger secondary keystroke*
 *code appears*
 
-A-ha! All along, King Markdown was just an JSX component. I embedded it here in my slides, which are written in MDX using a framework called mdx-deck. 
+The scepter has found some code after all. All along, King Markdown was just a React component.
+
+**switch to magnify and move sceptre closer**
+
+Like most React components, it accepts props, has event handlers, and renders some DOM, in this case an image.
+
+This component is actually embedded here in my slides, for real. The slides are written in MDX using a really great framework called mdx-deck. 
+
+todo: make the code appear over the king, or as a bubble
 </Notes>
 
 ---
 
-<JHorizontal>
+<AppearOnly>
 <div>
-deck.mdx
+  <JHorizontal>
+    <div>
+      <KingMarkdown height="25vh" />
+    </div>
+    <div>
+      <Code style={{ fontSize: '22px' }}>
+        {smallKingSnippet}
+      </Code>
+    </div>
+  </JHorizontal>
 </div>
 <div>
-components/KingMarkdown.js
+  <JHorizontal>
+    <div>
+      <KingMarkdown height="50vh" />
+    </div>
+    <div>
+      <Code style={{ fontSize: '22px' }}>
+        {bigKingSnippet}
+      </Code>
+    </div>
+  </JHorizontal>
 </div>
-</JHorizontal>
+</AppearOnly>
 
 <Notes>
-(navigate with higlighter, not magnifier, do H first then M later)
-On the left is the section of the MDX file for this slide.
+To embed the KingMarkdown component in my slides, I import it and use JSX syntax. The KingMarkdown component exposes some props that make it customizable and reusable, so we can use it in other places of our content. The king accepts a height prop, so we can make kings of different sizes throughout our presentation.
 
-On the right is the definition of the KingMarkdown component. On hover, the component superimposes code (and shoots stars?). We triggered the hover with this, the magical Royal Sceptre, but we could have used a mouse too.
+Heck, because the presentation is MDX, we can actually change the values of the props on the fly. I'll click into the MDX definition and we'll change the king's height. (or maybe this with the princess? and probably a separate slide?)
 
-The KingMarkdown component exposes some props that make it customizable and reusable, so we can use it in other places of our content.
+I hope I've made this presentation a little more fun and engaging because we can interact with it.
+
+todo: add the live coding part; up and down could be DOM elements
 </Notes>
 
 ---
 
-<KingMarkdown size="small" action="speak" />
-
-deck.mdx code on the right
-
-<Notes>
-*change slide, then point at the king*
-Here's a king that's smaller and speaks when we click on it, instead of showing the code. When we hover, it animates.
-
-Already, I hope I've made this presentation a little more fun and engaging because we can interact with it.
-</Notes>
-
----
-
-<KingMarkdown size="small" />
-<PrincessJavaScript size="small" />
+<Castle>
+  <JHorizontal>
+    <KingMarkdown />
+    <PrincessJavaScript />
+  </JHorizontal>
+</Castle>
 
 <Notes>
 But let's take it a bit further. Can we compose an entire scene with MDX? Yes. MDX lets us nest and compose our JSX components, just like we're used to.
 
 For example, we can put the princess in a castle.
-</Notes>
 
----
-
-<PrincessJavaScript size="small" />
-
-<Notes>
 **click on the princess**
 She says something.
 **click on the castle**
 It says shake the door loose.
 **shake the royal sceptre**
 Castle explodes, princess is free, and grateful.
+
+todo: build this scene
 </Notes>
 
 ---
 
-# Screenshots of MDX use cases
+# Reasons to use MDX
 
-Maybe with JSX tag next to them
+- common widgets
+- visual storytelling
+- design systems
+- page building
 
 <Notes>
 If I can do this in a presentation, imagine how you can use MDX on your JAMstack site. You can add common widgets like forms and emoji reactions, wrap elements of your design systems, or let authors build entire pages from JSX components. Authors only need to learn a familiar, HTML-like syntax, and never write raw JavaScript.
+
+todo: get the screenshots
 </Notes>
 
 ---
 
-# Logos
+# Plugin and integrations logos
 
 <Notes>
 MDX Plugins exist for Gatsby, Next.js and much more. Try MDX soon and bring peace and awesomeness to your content kingdom.
+
+todo: get the logos
 </Notes>
 
 ---

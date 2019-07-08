@@ -10,7 +10,7 @@ const Horizontal = ({ children }) => {
       css={{
         alignItems: 'center',
         height: '100%',
-        width: '90vw',
+        width: '100vw',
       }}
     >
       {kids.map(child => (

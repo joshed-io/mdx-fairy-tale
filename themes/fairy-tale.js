@@ -18,8 +18,7 @@ export default {
     marginBottom: '0.2em'
   },
   pre: {
-    // fontSize: `28px`,
-    // lineHeight: `42px`,
-    // color: `#fff !important`
+    // fontSize: `18px`,
+    // lineHeight: `22px`,
   },
 }
