@@ -39,9 +39,10 @@ export default class Character extends React.Component {
             css={{
               height: this.props.height,
               position: "absolute",
-              opacity: "0.5",
-              bottom: "0",
-              left: "0"
+              opacity: "1",
+              bottom: "20px",
+              left: "-400px",
+              zoom: '0.5'
             }}
           />
           <Code>{this.props.codeSnippet}</Code>
