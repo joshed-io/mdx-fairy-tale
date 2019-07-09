@@ -13,6 +13,5 @@
     "react-live": "^2.1.2",
     "react-syntax-highlighter": "^11.0.1",
     "styled-components": "^4.2.0"
-  },
-  "dependencies": {}
+  }
 }
