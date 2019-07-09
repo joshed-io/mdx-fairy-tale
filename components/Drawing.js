@@ -3,7 +3,7 @@ import { css } from "styled-components";
 
 export default class Drawing extends React.Component {
   componentDidMount() {
-    let x, y, isPainting;
+    let x, y, isPainting = true;
     const canvas = document.querySelector("canvas");
     const context = canvas.getContext("2d");
 
@@ -26,6 +26,7 @@ export default class Drawing extends React.Component {
       button.style.marginRight = "10px"
       button.style.borderRadius = "50%"
       button.style.border = "none"
+      button.style.outline = "none"
       colorDiv.appendChild(button);
       button.addEventListener("click", () => (context.strokeStyle = color));
     });
@@ -92,7 +93,7 @@ export default class Drawing extends React.Component {
     canvas.addEventListener("touchmove", paint);
 
     function exit() {
-      isPainting = false;
+      // isPainting = false;
     }
 
     canvas.addEventListener("mouseup", exit);
@@ -108,7 +109,6 @@ export default class Drawing extends React.Component {
           z-index: 2;
           margin: 0 40px;
           text-align: center;
-          outline: 0;
         `} />
         <canvas
           css={css`
