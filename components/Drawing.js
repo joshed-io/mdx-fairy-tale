@@ -106,6 +106,7 @@ export default class Drawing extends React.Component {
       <>
         <div className="colors" css={css`
           position: relative;
+          display: none;
           z-index: 2;
           margin: 0 40px;
           text-align: center;
