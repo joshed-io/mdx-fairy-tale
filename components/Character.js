@@ -58,21 +58,15 @@ export default class Character extends React.Component {
     } else {
       if (this.state.active && this.props.activeSrc) {
         return (
-          <Image
-            src={this.props.activeSrc}
-            css={{ height: this.props.height }}
-          />
+          <Image src={this.props.activeSrc} {...this.props} />
         );
       } else if (this.state.active) {
         return (
-          <ZoomedImage
-            src={this.props.src}
-            css={{ height: this.props.height }}
-          />
+          <ZoomedImage src={this.props.src} {...this.props} />
         );
       } else {
         return (
-          <Image src={this.props.src} css={{ height: this.props.height }} />
+          <Image src={this.props.src} {...this.props} />
         );
       }
     }
@@ -99,6 +93,8 @@ Character.defaultProps = {
 };
 
 const Image = styled.img`
+height: ${props => props.height};
+cursor: ${props => props.codeSnippet ? 'pointer' : 'inherit'};
 `;
 
 const ZoomedImage = styled(Image)`

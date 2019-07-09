@@ -64,7 +64,7 @@ export const theme = {
 
 # 👑 👸
 
-# MDX: content for kings and princesses
+# MDX: content for kings <br/> and princesses
 
 ---
 
@@ -77,11 +77,9 @@ export const theme = {
   <Image src="/images/josh-dzielak-crown.png" css={{ width: '30vw', borderRadius: '250px' }} />
   <div>
     <Image src="/images/algolia-logo.png" />
-    <Caption>formerly</Caption>
   </div>
   <div>
     <Image src="/images/developermode-logo-2.png" />
-    <Caption>co-founder</Caption>
   </div>
 </AppearOnly>
 
@@ -99,7 +97,7 @@ todo - transitions
 
 ---
 
-<img src="/images/mdx-logo.svg" css={{ width: "50vw" }}/>
+<img src="/images/mdx-logo.svg" css={{ width: "30vw" }}/>
 
 ## MDX = Markdown + JSX
 
@@ -131,14 +129,20 @@ Once upon a time, there was a king named King Markdown.
 
 ---
 
-<KingMarkdown />
-
-## King Markdown
-
-<Appear>
-<div>only knows scrolling</div>
-<div>great wall of text</div>
-</Appear>
+<AppearOnly>
+<div>
+  <KingMarkdown hoverable={false} />
+  <h2>King Markdown</h2>
+</div>
+<JHorizontal>
+  <KingMarkdown src="/images/king-markdown-2.png" hoverable={false} />
+  <Image src="/images/endless-text.png" style={{ height: '100vh' }} />
+</JHorizontal>
+<JHorizontal>
+  <KingMarkdown src="/images/king-markdown-2.png" hoverable={false} />
+  <Image src="/images/great-wall-of-text.png" style={{ height: '60vh', borderRadius: '500px' }} />
+</JHorizontal>
+</AppearOnly>
 
 <Notes>
 King Markdown loved text-heavy, long-form content. Paragraph after paragraph, multiple sentences each.
@@ -152,14 +156,20 @@ todo - add scrolling and wall images
 
 ---
 
-<PrincessJavaScript />
-
-## Princess JavaScript
-
-<Appear>
-<div>loves gestures</div>
-<div>knows the jamstack</div>
-</Appear>
+<AppearOnly>
+<div>
+  <PrincessJavaScript hoverable={false} />
+  <h2>Princess JavaScript</h2>
+</div>
+<JHorizontal>
+  <PrincessJavaScript src="/images/princess-javascript-2.png" hoverable={false} />
+  <Image src="/images/gestures.png" style={{ height: '50vh' }} />
+</JHorizontal>
+<JHorizontal>
+  <PrincessJavaScript src="/images/princess-javascript-2.png" hoverable={false} />
+  <Image src="/images/pump-up-the-jam.png" style={{ height: '40vh' }} />
+</JHorizontal>
+</AppearOnly>
 
 <Notes>
 King Markdown has a daughter, Princess JavaScript. Not a normal name but she’s not a normal princess.
@@ -174,9 +184,9 @@ todo - add gestures gif and jamstack devs
 ---
 
 <JHorizontal width='70vw'>
-<KingMarkdown src="/images/king-markdown-3.png" />
+<KingMarkdown src="/images/king-markdown-3.png" hoverable={false} />
 <h1>⚔️</h1>
-<PrincessJavaScript src="/images/princess-javascript-3-left.png" />
+<PrincessJavaScript src="/images/princess-javascript-3-left.png" hoverable={false} />
 </JHorizontal>
 
 <Notes>
