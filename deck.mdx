@@ -23,8 +23,8 @@ import JSplit from './components/Split'
 import JHorizontal from './components/Horizontal'
 import { Caption } from './components/Styled'
 
-import Castle from './components/Castle'
 import KingMarkdown from './components/KingMarkdown'
+import KingMarkdownStatic from './components/KingMarkdownStatic'
 import PrincessJavaScript from './components/PrincessJavaScript'
 
 import fairyTale from './themes/fairy-tale'
@@ -280,20 +280,19 @@ The engineers stayed up all night pair-programming and built a prototype of a ne
 </AppearOnly>
 
 <Notes>
-The new content was really engaging and easy for content authors to create. It took better advantage of the capabilities of people's devices and learning styles, letting them scroll and tap, pinch, rotate, shake, swipe, flip, rotate, watch gifs and videos, and more.
+The new content was really engaging and easy for content authors to create. It took better advantage of the capabilities of people's devices and learning styles, letting them scroll and tap, pinch, rotate, shake, swipe, flip, rotate, and more.
+
+I bet you're thinking, I want to see some of this MDX. This is a tech conference, I paid good money, I want to see some code. Do y'all want to see some code?
 </Notes>
 
 ---
 
-# 💻
+# 🕶️
 
-# Let's see some code
+# To the code!
 
 <Notes>
-
-I bet you're thinking, I want to see some of this MDX. This is a tech conference, I paid good money, I want to see some code. Do y'all want to see some code?
-
-Ok let's do it. (Put on glasses). You can never be too careful when you let someone else see your code.
+Ok me too. (Put on glasses). You can never be too careful when you let someone else see your code.
 
 Thankfully I brought the Royal Sceptre with me today, which is capable of inspecting code at a distance. It is indeed a prop made to inspect props. Let's see if the Royal Sceptre can find some code on this slide.
 </Notes>
@@ -306,8 +305,6 @@ Thankfully I brought the Royal Sceptre with me today, which is capable of inspec
 Searching, searching, searching... a ha!
 
 The scepter has found some code after all. All along, King Markdown was just a React component. Like most React components, it accepts props, has event handlers, and renders some DOM, in this case an image. This component is actually embedded here in my slides, for real. The slides are written in MDX using a really great framework called mdx-deck. 
-
-todo: make the code appear over the king, or as a bubble
 </Notes>
 
 ---
@@ -364,7 +361,7 @@ This king is taller and has a different image.
 ---
 
 <LiveProvider code={snippets.liveCode}
-    scope={{ KingMarkdown, PrincessJavaScript }}>
+    scope={{ KingMarkdown: KingMarkdownStatic, PrincessJavaScript }}>
   <JHorizontal width="90vw">
     <LivePreview />
     <CodeWrapper>
@@ -378,57 +375,58 @@ Heck, because the presentation is MDX and we have a running React app, we can ac
 
 I'll click into the MDX definition and let's change the King's properties. Maybe the king is lonely and needs some friends.
 
-I hope I've made this presentation a little more fun and engaging because we can interact with it.
+I hope I've made this presentation a little more fun and engaging because we can interact with it. If I can do this in a presentation, imagine how you can use MDX on your JAMstack site.
 </Notes>
 
 ---
+
+## Use MDX for:
+
+<br/>
 
 <JHorizontal>
-  <KingMarkdown hoverable={false} />
-  <PrincessJavaScript hoverable={false} src="/images/princess-javascript-1-left.png" />
+<div>
+Site widgets
+<br/><br/>
+Visual storytelling
+</div>
+<div>
+Design systems
+<br/><br/>
+Page building
+</div>
 </JHorizontal>
 
-<Castle>
-</Castle>
+<p>&nbsp;</p>
 
 <Notes>
-But let's take it a bit further. Can we compose an entire scene with MDX? Yes. MDX lets us nest and compose our JSX components, just like we're used to.
-
-For example, we can put the princess in a castle.
-
-**click on the princess**
-She says something.
-**click on the castle**
-It says shake the door loose.
-**shake the royal sceptre**
-Castle explodes, princess is free, and grateful.
-
-todo: build this scene
+Three areas where there is clear potential is in site widgets like forms, social widgets and comments, visual storytelling and data visualization, wrapping design systems so that authors can take advantage of them. And you could even let authors build entire pages from a standard set of blocks.
 </Notes>
 
 ---
 
-# Reasons to use MDX
+## Try MDX in your app:
 
-- common widgets
-- visual storytelling
-- design systems
-- page building
+<br/>
 
-<Notes>
-If I can do this in a presentation, imagine how you can use MDX on your JAMstack site. You can add common widgets like forms and emoji reactions, wrap elements of your design systems, or let authors build entire pages from JSX components. Authors only need to learn a familiar, HTML-like syntax, and never write raw JavaScript.
-
-todo: get the screenshots
-</Notes>
-
----
-
-# Plugin and integrations logos
+<JHorizontal>
+<div>
+<img src="/images/gatsby-logo.png" style={{ width: "15vw" }} />
+<br/><br/>
+<img src="/images/parcel-logo.png" style={{ width: "20vw" }} />
+</div>
+<div>
+<img src="/images/nextjs-logo.png" style={{ width: "12vw" }} />
+<br/><br/>
+<img src="/images/webpack-logo.png" style={{ width: "18vw" }} />
+</div>
+<div>
+.. and more!
+</div>
+</JHorizontal>
 
 <Notes>
 MDX Plugins exist for Gatsby, Next.js and much more. Try MDX soon and bring peace and awesomeness to your content kingdom.
-
-todo: get the logos
 </Notes>
 
 ---
