@@ -66,11 +66,15 @@ export const theme = {
 
 # MDX: content for kings <br/> and princesses
 
+<Notes>
+Hello everyone and welcome. It's a privilege to be speaking to you tonight.
+</Notes>
+
 ---
 
 <JHorizontal>
 <div>
-<h1>&lt;Josh &gt;</h1>
+<h1>&lt;Josh&gt;</h1>
 </div>
 
 <AppearOnly>
@@ -90,9 +94,7 @@ export const theme = {
 </JHorizontal>
 
 <Notes>
-Hi I’m Josh, a developer advocate formerly at Algolia and now the co-founder of DeveloperMode, where we do developer-relations-as-a-service and get to play with lots of cool tech. Like MDX, which is what I want to talk to you about tonight.
-
-todo - transitions
+My name is Josh and I'm a JAMstack enthusiast. ^^ Formerly I was the lead of developer relations at Algolia, ^^ and now I'm the cofounder of DeveloperMode, where we help companies improve their developer relations programs. We also build projects that educate and inform developers, and that means we get to play with new technologies.
 </Notes>
 
 ---
@@ -102,7 +104,7 @@ todo - transitions
 ## MDX = Markdown + JSX
 
 <Notes>
-MDX lets you put JSX components in your markdown documents, making the power of your whole JavaScript app accessible from your content.
+One of my favorite new technologies is called MDX. MDX allows content authors to embed JSX components inside of their markdown documents, giving them more power and making it easier to create rich, interactive content.
 </Notes>
 
 ---
@@ -110,11 +112,17 @@ MDX lets you put JSX components in your markdown documents, making the power of 
 <img src="/images/awesome-stacks-gatsby-screenshot.png" style={{ height: "95vh", border: "1px solid #cacaca" }} />
 
 <Notes>
-I first used MDX when building an open source project Awesome Stacks. Awesome Stacks is like an awesome list for stacks on steroids, because an entire Gatsby site is built from the README content. Each awesome stack gets its own page that shows information about each tool in the stack pulled from the GitHub and StackShare GraphQL APIs. I used MDX to allow these GitHub and StackShare tool cards to be shown inline with the content, like you see here for Gatsby, Cloud Firestore and Netlify.
+I first found MDX when I was building a project called Awesome Stacks. Awesome Stacks is an awesome list for tech stacks. The data is stored in a GitHub readme, and from that a Gatsby site is built, which pulls in data from the GitHub and StackShare GraphQL APIs.
+</Notes>
 
-To help you learn more about MDX and how it can help JAMstack teams, I want to tell you a story. But since case studies can be kinda boring, and we're at a pub, I'll tell you a fairy tale instead. 
+---
 
-todo: add images for GitHub component, circle components in image
+<img src="/images/awesome-stacks-gatsby-screenshot-2.png" style={{ height: "95vh", border: "1px solid #cacaca" }} />
+
+<Notes>
+I created React components to show a card with information about each tool, and wanted to make those cards embeddable inside markdown, so the author of each stack could decide where best to place them in the flow of content.
+
+This is just one way MDX can be used, and there are many for JAMstack teams. But before I go into those, I want to talk abotu fundamentally why a technology like MDX matters. What problem does it solve? To do that, I want to tell you a story. But since case studies can be kinda boring, and we're at a pub, I'm going to tell you a fairy tale instead. 
 </Notes>
 
 ---
@@ -140,18 +148,14 @@ Once upon a time, there was a king named King Markdown.
 </JHorizontal>
 <JHorizontal>
   <KingMarkdown src="/images/king-markdown-2.png" hoverable={false} />
-  <Image src="/images/great-wall-of-text.png" style={{ height: '60vh', borderRadius: '500px' }} />
+  <Image src="/images/great-wall-of-text-2.png" style={{ height: '60vh', opacity: '0.8', borderRadius: '400px', margin: '-250px 0 0 -450px' }} />
 </JHorizontal>
 </AppearOnly>
 
 <Notes>
-King Markdown loved text-heavy, long-form content. Paragraph after paragraph, multiple sentences each.
+King Markdown loved text-heavy, long-form content. ^^ Paragraph after paragraph, of multiple sentences each. Few images, if any. The only gesture he knows is scrolling.
 
-The only gestures he knows are scrolling and turning pages.
-
-He's so adamant about having his content his way that he tried to build a Great Wall of Text at the kingdom's southern border, but no one thought it was a good idea and he never got the money to do it.
-
-todo - add scrolling and wall images
+King Markdown is so adamant about having his content his way that he tried to build a Great Wall of Text at the kingdom's southern border, but no one thought it was a good idea and he never got the money to do it.
 </Notes>
 
 ---
@@ -161,65 +165,83 @@ todo - add scrolling and wall images
   <PrincessJavaScript hoverable={false} />
   <h2>Princess JavaScript</h2>
 </div>
-<JHorizontal>
+<JHorizontal width='70vw'>
   <PrincessJavaScript src="/images/princess-javascript-2.png" hoverable={false} />
   <Image src="/images/gestures.png" style={{ height: '50vh' }} />
 </JHorizontal>
-<JHorizontal>
+<JHorizontal width='70vw'>
   <PrincessJavaScript src="/images/princess-javascript-2.png" hoverable={false} />
   <Image src="/images/pump-up-the-jam.png" style={{ height: '40vh' }} />
 </JHorizontal>
 </AppearOnly>
 
 <Notes>
-King Markdown has a daughter, Princess JavaScript. Not a normal name but she’s not a normal princess.
+King Markdown had a daughter, Princess JavaScript. That's not a normal name but she’s not a normal princess.
 
-She writes code and she loves to use many different gestures to interact with her content; to tap, pinch, rotate, shake and swipe.
+Princess JavaScript is a trained developer, she loves beautiful and responsive interfaces, and she likes to use many different gestures to interact with her content; to tap, pinch, rotate, shake and swipe.
 
-How'd she learn all that, growing up around so much markdown? One night she snuck out of the kingdom and visited other kingdoms where JAMstack developers live, discovering interactive data viz and visual storytelling. Ever since then, she has been tirelessly advocating to bring this kind of content back into her own kingdom.
-
-todo - add gestures gif and jamstack devs
+How'd she learn to do that, growing up around so much markdown? One night she snuck out of the kingdom and visited the JAMstack Kingdom, encountering beautiful sites full of visual storytelling and data visualization and runnable code samples. Ever since then, she has been tirelessly advocating to bring this kind of content back into her own kingdom.
 </Notes>
 
 ---
 
 <JHorizontal width='70vw'>
 <KingMarkdown src="/images/king-markdown-3.png" hoverable={false} />
-<h1>⚔️</h1>
+<h1 style={{ fontSize: '128px' }}>⚔️</h1>
 <PrincessJavaScript src="/images/princess-javascript-3-left.png" hoverable={false} />
 </JHorizontal>
 
 <Notes>
-So as you can imagine, there's been a lot of tension in the royal palace, similar to what some of you may have even seen in your content teams. Although some prefer very linear content, competition for people's attention and preferences are changing, and more dynamic and interactive content is becoming the norm.
+As you can imagine, there's been a lot of tension in the royal palace, similar to what some of you may have even seen in your content teams. Although some readers prefer very linear, textual content, others prefer more dynamic and interactive content, that lets them do more than just scroll. Content teams, then and now, struggle to serve both audiences and keep up with the latest trends.
 </Notes>
 
 ---
 
-# 📯
-
-# Royal Academy of Content
-
-<Flex>
-<Box width={1/3}>
-Markdown can't handle events!
-</Box>
-<Box width={1/3}>
-Content authors don't know JavaScript!
-</Box>
-</Flex>
+<AppearOnly>
+<div>
+  <img src="/images/adventure-time-dance-party-border.gif" style={{ height: '50vh' }} />
+  <h2>Royal Academy of Content</h2>
+</div>
+<JHorizontal width="70vw">
+  <div>
+    <img src="/images/adventure-time-dance-party-border.gif" style={{ height: '30vh' }} />
+    <div style={{ color: "#555", fontSize: "24px" }}>Royal Academy of Content</div>
+  </div>
+  <h4>But...<br/>"Content authors don't know JavaScript!"</h4>
+</JHorizontal>
+<JHorizontal width="70vw">
+  <div>
+    <img src="/images/adventure-time-dance-party-border.gif" style={{ height: '30vh' }} />
+    <div style={{ color: "#555", fontSize: "24px" }}>Royal Academy of Content</div>
+  </div>
+  <h4>But... <br/>"Markdown can't handle events!"</h4>
+</JHorizontal>
+</AppearOnly>
 
 <Notes>
-The kingdom's content experts, known as the Royal Academy of Content, were struggling to please both king and princess, and they were losing traffic to other kingdoms.
+The kingdom's multi-disciplinary content experts were known as the Royal Academy of Content. They were struggling to please both the king and princess, and they were also losing traffic to other kingdoms, who were more willing to experiment.
 
-The academy's markdown authors wanted to make their content more interactive, but they didn't know how. "There's no way to handle events in markdown", they cried! The front-end engineers wanted to help, but they thought it would be too dangerous to let the markdown authors put arbitrary JavaScript code in their documents.
+The academy's markdown authors wanted to make their content more interactive, but they didn't know how. "There's no way to handle events in markdown", they cried! The front-end engineers wanted to help, but they thought it would be too dangerous to let the markdown authors put arbitrary JavaScript code in their documents, and knew that it wouldn't be fair or efficient to expect content authors to learn too much JavaScript.
 </Notes>
 
 ---
 
-<img src="/images/zeit-mdx-tweet.png" css={{ width: '30vw' }} />
+<AppearOnly>
+<div>
+<img src="/images/academy-heros-2.png" css={{ width: '25vw' }} />
+</div>
+<JHorizontal width="70vw">
+<div>
+<img src="/images/academy-heros-2.png" css={{ width: '25vw' }} />
+</div>
+<div>
+<img src="/images/zeit-mdx-tweet.png" css={{ width: '40vw' }} />
+</div>
+</JHorizontal>
+</AppearOnly>
 
 <Notes>
-One day, one of the engineers at the Royal Academy of Content was browsing Twitter and saw a tweet about something called MDX. He read the blog post behind the tweet and knew he thought "wow, this could be the perfect solution"
+One day, several of the engineers at the Royal Academy of Content were traveling the world in search of a solution, when they encountered a tweet on the JAMstack kingdom twitter about MDX. He read the blog post behind the tweet and knew he thought "wow, this could be the perfect solution".
 
 The engineer stayed up all night coding and built a prototype of a news article with an interactive timeline, and the rest was history. The kingdomw rejoiced.
 
