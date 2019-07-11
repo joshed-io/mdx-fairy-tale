@@ -86,7 +86,7 @@ export default class Drawable extends React.Component {
           z-index: 3;
           font-size: 24px;
         `}>
-          Credit: <a href="https://dev.to/aspittel/how-to-create-the-drawing-interaction-on-dev-s-offline-page-1mbe">Ali Spittel</a>
+          Inspiration: <a href="https://dev.to/aspittel/how-to-create-the-drawing-interaction-on-dev-s-offline-page-1mbe">Ali Spittel</a>
         </div>
         <canvas
           css={css`

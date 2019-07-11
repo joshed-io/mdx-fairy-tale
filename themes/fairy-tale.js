@@ -17,6 +17,9 @@ export default {
   heading: {
     margin: '0.25em 0'
   },
+  code: {
+    display: 'inline'
+  },
   css: {
     textarea: {
       outline: '0'

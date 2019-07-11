@@ -69,12 +69,18 @@ import Spacer from '../components/Spacer'
     scope={{ KingMarkdown: KingMarkdownStatic, PrincessJavaScript }}>
   <Horizontal width="90vw">
     <LivePreview />
-    <Box>
-      <LiveEditor theme={prismTheme} style={{ 
-        fontFamily: 'Consolas, Monaco, monospace',
-        fontSize: '22px', lineHeight: "42px",
-        background: 'none', caretColor: '#0a0a0a' }} />
-    </Box>
+    <div>
+      <Box>
+        <LiveEditor theme={prismTheme} style={{ 
+          fontFamily: 'Consolas, Monaco, monospace',
+          fontSize: '22px', lineHeight: "42px",
+          background: 'none', caretColor: '#0a0a0a' }} />
+      </Box>
+      <p style={{ fontSize: '24px' }}>
+        Try changing <i>src</i> to <i>/images/king-markdown-4.png</i><br/>
+        and the height to <i>100vh</i>.
+      </p>
+    </div>
   </Horizontal>
 </LiveProvider>
 
