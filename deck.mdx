@@ -20,9 +20,7 @@ import PrincessJavaScript from './components/PrincessJavaScript'
 
 export const theme = {
   Provider,
-  components: {
-    img: Image
-  },
+  ...fairyTaleTheme,
   metadata: {
     title: `MDX: content for kings and princesses`,
     author: `Josh Dzielak`,
@@ -31,8 +29,7 @@ export const theme = {
     event_twitter_link: `https://twitter.com/jamstackconf`,
     date: `July 9, 2019`,
     repository: `https://github.com/developermode/mdx-fairy-tale`
-  },
-  ...fairyTaleTheme,
+  }
 }
 
 <Head>
@@ -57,26 +54,26 @@ export const theme = {
 ---
 
 <Horizontal>
-<div>
-  <h1>&lt;Josh&gt;</h1>
-</div>
-<Appear>
-  <Image src="/images/josh-dzielak-crown.png" css={{ width: '30vw', borderRadius: '250px' }} />
   <div>
-    <Image src="/images/algolia-logo.png" />
+    <h1>&lt;Josh&gt;</h1>
   </div>
+  <Appear>
+    <img src="/images/josh-dzielak-crown.png" style={{ width: '30vw', borderRadius: '250px' }} />
+    <div>
+      <img src="/images/algolia-logo.png" />
+    </div>
+    <div>
+      <img src="/images/developermode-logo-2.png" />
+    </div>
+  </Appear>
   <div>
-    <Image src="/images/developermode-logo-2.png" />
+    <h1>&lt;/Josh &gt;</h1>
   </div>
-</Appear>
-<div>
-  <h1>&lt;/Josh &gt;</h1>
-</div>
 </Horizontal>
 
 ---
 
-<img src="/images/mdx-logo.svg" css={{ width: "30vw" }}/>
+<img src="/images/mdx-logo.svg" style={{ width: "30vw" }}/>
 
 ## MDX = Markdown + JSX
 
@@ -105,11 +102,11 @@ export const theme = {
   </div>
   <Horizontal>
     <KingMarkdown src="/images/king-markdown-2.png" hoverable={false} />
-    <Image src="/images/endless-text.png" style={{ height: '100vh' }} />
+    <img src="/images/endless-text.png" style={{ height: '100vh' }} />
   </Horizontal>
   <Horizontal>
     <KingMarkdown src="/images/king-markdown-2.png" hoverable={false} />
-    <Image src="/images/great-wall-of-text-2.png"
+    <img src="/images/great-wall-of-text-2.png"
            style={{ height: '60vh', opacity: '0.8', 
                     borderRadius: '400px', margin: '-250px 0 0 -450px' }} />
   </Horizontal>
@@ -124,11 +121,11 @@ export const theme = {
   </div>
   <Horizontal width='70vw'>
     <PrincessJavaScript src="/images/princess-javascript-2.png" hoverable={false} />
-    <Image src="/images/gestures.png" style={{ height: '50vh' }} />
+    <img src="/images/gestures.png" style={{ height: '50vh' }} />
   </Horizontal>
   <Horizontal width='70vw'>
     <PrincessJavaScript src="/images/princess-javascript-2.png" hoverable={false} />
-    <Image src="/images/pump-up-the-jam.png" style={{ height: '40vh' }} />
+    <img src="/images/pump-up-the-jam.png" style={{ height: '40vh' }} />
   </Horizontal>
 </Appear>
 
@@ -166,28 +163,28 @@ export const theme = {
 ---
 
 <Appear>
-<div>
-  <img src="/images/academy-heros-2.png" css={{ width: '25vw' }} />
-</div>
-<Horizontal width="80vw">
   <div>
-    <img src="/images/academy-heros-2.png" css={{ width: '25vw' }} />
+    <img src="/images/academy-heros-2.png" style={{ width: '25vw' }} />
   </div>
-  <div>
-    <img src="/images/mdx-montage.png" css={{ width: '40vw' }} />
-  </div>
-</Horizontal>
-<Horizontal width="80vw">
-  <div>
-    <img src="/images/female-footballers-interactive-content.gif" 
-         css={{ height: '80vh', border: '1px solid #0a0a0a' }} />
-  </div>
-</Horizontal>
+  <Horizontal width="80vw">
+    <div>
+      <img src="/images/academy-heros-2.png" style={{ width: '25vw' }} />
+    </div>
+    <div>
+      <img src="/images/mdx-montage.png" style={{ width: '40vw' }} />
+    </div>
+  </Horizontal>
+  <Horizontal width="80vw">
+    <div>
+      <img src="/images/female-footballers-interactive-content.gif" 
+          style={{ height: '80vh', border: '1px solid #0a0a0a' }} />
+    </div>
+  </Horizontal>
 </Appear>
 
 ---
 
-<img src="/images/adventure-time-dance-party.gif" css={{ width: '50vw' }} />
+<img src="/images/adventure-time-dance-party.gif" style={{ width: '50vw' }} />
 
 ---
 
