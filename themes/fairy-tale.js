@@ -1,4 +1,5 @@
 const black = '#0a0a0a';
+const backgroundImage = '/images/fairy-tale-castle-o25.jpg';
 
 export default {
   font: 'Crimson Text, serif',
@@ -10,7 +11,7 @@ export default {
     code: black,
   },
   Slide: {
-    background: 'url(/images/fairy-tale-castle-o25.jpg) no-repeat center center',
+    background: `url(${backgroundImage}) no-repeat center center`,
     backgroundSize: 'cover'
   },
   heading: {

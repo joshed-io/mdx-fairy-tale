@@ -6,8 +6,8 @@ import * as snippets from '../snippets/index'
 import Appear from '../components/Appear'
 import Box from '../components/Box'
 import Code from '../components/Code'
-import Drawing from '../components/Drawing'
-import Horizontal from '../components/Horizontal'
+import Drawable from '../layouts/Drawable'
+import Horizontal from '../layouts/Horizontal'
 import KingMarkdown from '../components/KingMarkdown'
 import KingMarkdownStatic from '../components/KingMarkdownStatic'
 import PrincessJavaScript from '../components/PrincessJavaScript'
@@ -82,17 +82,17 @@ import Spacer from '../components/Spacer'
 
 ## Use MDX for:
 
-<Spacer height="75px" />
+<Spacer height="10vh" />
 
 <Horizontal width="80vw">
   <div>
     🗯️ Site widgets
-    <Spacer height="50px" />
+    <Spacer height="5vh" />
     👨‍🎨 Visual storytelling
   </div>
   <div>
     💅 Design systems
-    <Spacer height="50px" />
+    <Spacer height="5vh" />
     🚜 Page building
   </div>
 </Horizontal>
@@ -101,17 +101,17 @@ import Spacer from '../components/Spacer'
 
 ## Try MDX in your app:
 
-<Spacer height="75px" />
+<Spacer height="10vh" />
 
 <Horizontal width="90vw">
   <div>
     <img src="/images/gatsby-logo.png" width="15vw" />
-    <Spacer height="50px" />
+    <Spacer height="5vh" />
     <img src="/images/parcel-logo.png" width="20vw" />
   </div>
   <div>
     <img src="/images/nextjs-logo.png" width="12vw" />
-    <Spacer height="50px" />
+    <Spacer height="5vh" />
     <img src="/images/webpack-logo.png" width= "18vw" />
   </div>
   <div>
@@ -122,7 +122,7 @@ import Spacer from '../components/Spacer'
 
 ---
 
-<Drawing color="#ce4999" width={20}>
+<Drawable color="#ce4999" width={20}>
 
 # Thank you!
 
@@ -130,4 +130,4 @@ import Spacer from '../components/Spacer'
   Click and hold to draw on the page.
 </div>
 
-</Drawing>
+</Drawable>

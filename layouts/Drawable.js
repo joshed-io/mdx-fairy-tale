@@ -1,7 +1,7 @@
 import React from "react";
 import { css } from "styled-components";
 
-export default class Drawing extends React.Component {
+export default class Drawable extends React.Component {
   componentDidMount() {
     let x, y, isPainting = false;
     const canvas = document.querySelector("canvas");
