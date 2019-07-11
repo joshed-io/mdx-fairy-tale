@@ -1,39 +1,25 @@
 import React from 'react'
-import {
-  LiveProvider,
-  LiveEditor,
-  LiveError,
-  LivePreview
-} from 'react-live'
-
+import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live'
 import { Head, Notes, Image as MdxImage  } from 'mdx-deck'
-import { Appear } from '@mdx-deck/components'
-import { Split, Horizontal } from '@mdx-deck/layouts'
-import Box from '@mdx-deck/layouts/src/Box'
-import Flex from '@mdx-deck/layouts/src/Flex'
 import prismTheme from 'prism-react-renderer/themes/github'
 
-import AppearOnly from './components/AppearOnly'
+import fairyTaleTheme from './themes/fairy-tale'
+import * as snippets from './snippets/index'
+import Appear from './components/Appear'
 import Code from './components/Code'
 import CodeWrapper from './components/CodeWrapper'
-import Image from './components/Image'
-import Provider from './components/Provider'
-import Header from './components/Header'
-import JSplit from './components/Split'
-import JHorizontal from './components/Horizontal'
-import { Caption } from './components/Styled'
 import Drawing from './components/Drawing'
-
+import Header from './components/Header'
+import Horizontal from './components/Horizontal'
+import Image from './components/Image'
 import KingMarkdown from './components/KingMarkdown'
 import KingMarkdownStatic from './components/KingMarkdownStatic'
+import Provider from './components/Provider'
 import PrincessJavaScript from './components/PrincessJavaScript'
-
-import fairyTale from './themes/fairy-tale'
-import * as snippets from './snippets/index'
 
 export const theme = {
   Provider,
-  ...fairyTale,
+  ...fairyTaleTheme,
   components: {
     img: Image
   },
@@ -74,12 +60,12 @@ Hello everyone and welcome. It's a privilege to be speaking to you tonight.
 
 ---
 
-<JHorizontal>
+<Horizontal>
 <div>
 <h1>&lt;Josh&gt;</h1>
 </div>
 
-<AppearOnly>
+<Appear>
   <Image src="/images/josh-dzielak-crown.png" css={{ width: '30vw', borderRadius: '250px' }} />
   <div>
     <Image src="/images/algolia-logo.png" />
@@ -87,13 +73,13 @@ Hello everyone and welcome. It's a privilege to be speaking to you tonight.
   <div>
     <Image src="/images/developermode-logo-2.png" />
   </div>
-</AppearOnly>
+</Appear>
 
 <div>
 <h1>&lt;/Josh &gt;</h1>
 </div>
 
-</JHorizontal>
+</Horizontal>
 
 <Notes>
 My name is Josh and I'm a JAMstack enthusiast. ^^ Formerly I was the lead of developer relations at Algolia, ^^ and now I'm the cofounder of DeveloperMode, where we help companies improve their developer relations programs. We also build projects that educate and inform developers, and that means we get to play with new technologies.
@@ -140,20 +126,20 @@ Once upon a time, there was a king named King Markdown.
 
 ---
 
-<AppearOnly>
+<Appear>
 <div>
   <KingMarkdown hoverable={false} />
   <h2>King Markdown</h2>
 </div>
-<JHorizontal>
+<Horizontal>
   <KingMarkdown src="/images/king-markdown-2.png" hoverable={false} />
   <Image src="/images/endless-text.png" style={{ height: '100vh' }} />
-</JHorizontal>
-<JHorizontal>
+</Horizontal>
+<Horizontal>
   <KingMarkdown src="/images/king-markdown-2.png" hoverable={false} />
   <Image src="/images/great-wall-of-text-2.png" style={{ height: '60vh', opacity: '0.8', borderRadius: '400px', margin: '-250px 0 0 -450px' }} />
-</JHorizontal>
-</AppearOnly>
+</Horizontal>
+</Appear>
 
 <Notes>
 King Markdown loved text-heavy, long-form content. ^^ Paragraph after paragraph, of multiple sentences each. Few images, if any. The only gesture he knows is scrolling.
@@ -163,20 +149,20 @@ King Markdown is so adamant about having his content his way that he tried to bu
 
 ---
 
-<AppearOnly>
+<Appear>
 <div>
   <PrincessJavaScript hoverable={false} />
   <h2>Princess JavaScript</h2>
 </div>
-<JHorizontal width='70vw'>
+<Horizontal width='70vw'>
   <PrincessJavaScript src="/images/princess-javascript-2.png" hoverable={false} />
   <Image src="/images/gestures.png" style={{ height: '50vh' }} />
-</JHorizontal>
-<JHorizontal width='70vw'>
+</Horizontal>
+<Horizontal width='70vw'>
   <PrincessJavaScript src="/images/princess-javascript-2.png" hoverable={false} />
   <Image src="/images/pump-up-the-jam.png" style={{ height: '40vh' }} />
-</JHorizontal>
-</AppearOnly>
+</Horizontal>
+</Appear>
 
 <Notes>
 King Markdown had a daughter, Princess JavaScript. That's not a normal name but she’s not a normal princess.
@@ -188,11 +174,11 @@ How'd she learn to do that, growing up around so much markdown? One night she sn
 
 ---
 
-<JHorizontal width='70vw'>
+<Horizontal width='70vw'>
 <KingMarkdown src="/images/king-markdown-3.png" hoverable={false} />
 <h1 style={{ fontSize: '128px' }}>⚔️</h1>
 <PrincessJavaScript src="/images/princess-javascript-3-left.png" hoverable={false} />
-</JHorizontal>
+</Horizontal>
 
 <Notes>
 As you can imagine, there's been a lot of tension in the royal palace, similar to what some of you may have even seen in your content teams. Although some readers prefer very linear, textual content, others prefer more dynamic and interactive content. Content teams, then and now, struggle to serve both audiences and keep up with the latest trends.
@@ -200,26 +186,26 @@ As you can imagine, there's been a lot of tension in the royal palace, similar t
 
 ---
 
-<AppearOnly>
+<Appear>
 <div>
   <img src="/images/adventure-time-dance-party-border.gif" style={{ height: '50vh' }} />
   <h2>Royal Academy of Content</h2>
 </div>
-<JHorizontal width="70vw">
+<Horizontal width="70vw">
   <div>
     <img src="/images/adventure-time-dance-party-border.gif" style={{ height: '30vh' }} />
     <div style={{ color: "#555", fontSize: "24px" }}>Royal Academy of Content</div>
   </div>
   <h4>But... <br/>"Markdown can't handle events!"</h4>
-</JHorizontal>
-<JHorizontal width="70vw">
+</Horizontal>
+<Horizontal width="70vw">
   <div>
     <img src="/images/adventure-time-dance-party-border.gif" style={{ height: '30vh' }} />
     <div style={{ color: "#555", fontSize: "24px" }}>Royal Academy of Content</div>
   </div>
   <h4>But...<br/>"Content authors shouldn't have to learn JS!"</h4>
-</JHorizontal>
-</AppearOnly>
+</Horizontal>
+</Appear>
 
 <Notes>
 The kingdom's multi-disciplinary content experts were known as the Royal Academy of Content. They were struggling to please both the king and princess, and they were also losing traffic to other kingdoms, who were more willing to experiment.
@@ -229,24 +215,24 @@ The academy's markdown authors wanted to make their content more interactive, bu
 
 ---
 
-<AppearOnly>
+<Appear>
 <div>
   <img src="/images/academy-heros-2.png" css={{ width: '25vw' }} />
 </div>
-<JHorizontal width="80vw">
+<Horizontal width="80vw">
   <div>
     <img src="/images/academy-heros-2.png" css={{ width: '25vw' }} />
   </div>
   <div>
     <img src="/images/mdx-montage.png" css={{ width: '40vw' }} />
   </div>
-</JHorizontal>
-<JHorizontal width="80vw">
+</Horizontal>
+<Horizontal width="80vw">
   <div>
     <img src="/images/female-footballers-interactive-content.gif" css={{ height: '80vh', border: '1px solid #0a0a0a' }} />
   </div>
-</JHorizontal>
-</AppearOnly>
+</Horizontal>
+</Appear>
 
 <Notes>
 One day, several of the engineers at the Royal Academy of Content were traveling the internets in search of a solution, when they encountered a bunch of community blog posts about MDX. ^^ They read the posts and thought "wow, this could be just what we've been looking for!".
@@ -264,8 +250,8 @@ The kingdom rejoiced and there was much dancing. Traffic went back up so even th
 
 ---
 
-<AppearOnly>
-<JHorizontal width="75vw" style={{  }}>
+<Appear>
+<Horizontal width="75vw" style={{  }}>
   <div style={{ textAlign: 'right', marginRight: '100px' }}>
     <h3>Content <br/>interactions:</h3>
   </div>
@@ -274,8 +260,8 @@ The kingdom rejoiced and there was much dancing. Traffic went back up so even th
     <div>read, scroll</div>
     <p></p>
   </CodeWrapper>
-</JHorizontal>
-<JHorizontal width="75vw" style={{  }}>
+</Horizontal>
+<Horizontal width="75vw" style={{  }}>
   <div style={{ textAlign: 'right', marginRight: '100px' }}>
     <h3>More content <br/>interactions:</h3>
   </div>
@@ -284,8 +270,8 @@ The kingdom rejoiced and there was much dancing. Traffic went back up so even th
     <div>read, scroll, click, <br/> tap, pinch, zoom, <br/> rotate, keypress, shake, <br/> run, drag, drop, <br/> swipe, flip, rotate</div>
     <p></p>
   </CodeWrapper>
-</JHorizontal>
-</AppearOnly>
+</Horizontal>
+</Appear>
 
 <Notes>
 It took better advantage of people's preferences and the capabilities of their devices, ^^ letting them ... ... and more.
@@ -317,8 +303,8 @@ The scepter has found some code after all. All along, King Markdown was just a R
 
 ---
 
-<AppearOnly>
-<JHorizontal>
+<Appear>
+<Horizontal>
   <div>
     <KingMarkdown height="50vh" hoverable={false} />
   </div>
@@ -329,8 +315,8 @@ The scepter has found some code after all. All along, King Markdown was just a R
       </Code>
     </CodeWrapper>
   </div>
-</JHorizontal>
-<JHorizontal>
+</Horizontal>
+<Horizontal>
   <div>
     <KingMarkdown height="75vh" hoverable={false} />
   </div>
@@ -341,8 +327,8 @@ The scepter has found some code after all. All along, King Markdown was just a R
     </Code>
     </CodeWrapper>
   </div>
-</JHorizontal>
-<JHorizontal>
+</Horizontal>
+<Horizontal>
   <div>
     <KingMarkdown height="75vh" src="/images/king-markdown-2.png" hoverable={false} />
   </div>
@@ -353,8 +339,8 @@ The scepter has found some code after all. All along, King Markdown was just a R
     </Code>
     </CodeWrapper>
   </div>
-</JHorizontal>
-</AppearOnly>
+</Horizontal>
+</Appear>
 
 <Notes>
 To embed the KingMarkdown component in my slides, I import it and use JSX syntax. The KingMarkdown component exposes some props that make it customizable and reusable, so we can use it in other places of our content.
@@ -370,12 +356,12 @@ This king is taller and has a different image.
 
 <LiveProvider code={snippets.liveCode}
     scope={{ KingMarkdown: KingMarkdownStatic, PrincessJavaScript }}>
-  <JHorizontal width="90vw">
+  <Horizontal width="90vw">
     <LivePreview />
     <CodeWrapper>
       <LiveEditor style={{ fontFamily: 'Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace', fontSize: '22px', lineHeight: "42px", background: 'none', caretColor: '#0a0a0a' }} theme={prismTheme} />
     </CodeWrapper>
-  </JHorizontal>
+  </Horizontal>
 </LiveProvider>
 
 <Notes>
@@ -392,7 +378,7 @@ I hope you've found this presentation a little more fun and engaging because we 
 
 <br/>
 
-<JHorizontal width="80vw">
+<Horizontal width="80vw">
 <div>
 🗯️ Site widgets
 <br/><br/>
@@ -403,7 +389,7 @@ I hope you've found this presentation a little more fun and engaging because we 
 <br/><br/>
 🚜 Page building
 </div>
-</JHorizontal>
+</Horizontal>
 
 <br/>
 
@@ -417,7 +403,7 @@ There are four use cases where you can start using MDX right now. The first in s
 
 <br/>
 
-<JHorizontal width="90vw">
+<Horizontal width="90vw">
 <div>
 <img src="/images/gatsby-logo.png" style={{ width: "15vw" }} />
 <br/><br/>
@@ -433,7 +419,7 @@ more at
 <br/>
 <a href="https://mdxjs.com/">mdxjs.com</a>
 </div>
-</JHorizontal>
+</Horizontal>
 
 <Notes>
 So how you can you get started?

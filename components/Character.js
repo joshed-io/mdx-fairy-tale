@@ -7,27 +7,21 @@ import CodeWrapper from "./CodeWrapper";
 export default class Character extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      codeVisible: false,
-      active: false
-    };
+    this.state = { codeVisible: false, active: false };
     this.handleMouseEnter = this.handleMouseEnter.bind(this);
     this.handleMouseLeave = this.handleMouseLeave.bind(this);
     this.handleClick = this.handleClick.bind(this);
   }
 
-  handleMouseEnter(event) {
+  handleMouseEnter() {
     if (this.props.hoverable) {
       this.setState({ active: true });
     }
   }
 
-  handleMouseLeave(event) {
+  handleMouseLeave() {
     if (this.props.hoverable) {
-      this.setState({ 
-        active: false, 
-        // codeVisible: false  // testing only, otherwise can lose behind mag glass
-      });
+      this.setState({ active: false });
     }
   }
 
@@ -36,11 +30,12 @@ export default class Character extends React.Component {
   }
 
   renderCharacter() {
+    const src = this.state.active && this.props.activeSrc ? this.props.activeSrc : this.props.src; 
     if (this.state.codeVisible && this.props.codeSnippet) {
       return (
         <div css={{ position: "relative" }}>
           <Image
-            src={this.props.activeSrc || this.props.src}
+            src={src}
             css={{
               height: this.props.height,
               position: "absolute",
@@ -56,19 +51,9 @@ export default class Character extends React.Component {
         </div>
       );
     } else {
-      if (this.state.active && this.props.activeSrc) {
-        return (
-          <Image src={this.props.activeSrc} {...this.props} />
-        );
-      } else if (this.state.active) {
-        return (
-          <ZoomedImage src={this.props.src} {...this.props} />
-        );
-      } else {
-        return (
-          <Image src={this.props.src} {...this.props} />
-        );
-      }
+      return this.state.active ? 
+        <ZoomedImage src={src} {...this.props} /> :
+        <Image src={src} {...this.props} />;
     }
   }
 
@@ -99,7 +84,4 @@ cursor: ${props => props.codeSnippet ? 'pointer' : 'inherit'};
 
 const ZoomedImage = styled(Image)`
 zoom: 1.5;
-:hover {
-  transition: all .2s ease-in-out;
-}
 `;

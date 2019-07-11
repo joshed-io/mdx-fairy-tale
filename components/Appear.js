@@ -1,7 +1,7 @@
 import React from 'react'
 import { useSteps } from '@mdx-deck/components'
 
-export const AppearOnly = props => {
+export const Appear = props => {
   const arr = React.Children.toArray(props.children)
   const step = useSteps(arr.length - 1)
   const children = arr.map((child, i) =>
@@ -18,4 +18,4 @@ export const AppearOnly = props => {
   return <>{children}</>
 }
 
-export default AppearOnly
+export default Appear
