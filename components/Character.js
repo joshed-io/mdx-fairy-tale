@@ -60,6 +60,7 @@ export default class Character extends React.Component {
   render() {
     return (
       <div
+        style={this.props.style}
         onMouseEnter={this.handleMouseEnter}
         onMouseLeave={this.handleMouseLeave}
         onClick={this.handleClick}
