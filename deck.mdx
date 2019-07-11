@@ -7,23 +7,24 @@ import fairyTaleTheme from './themes/fairy-tale'
 import * as snippets from './snippets/index'
 import Appear from './components/Appear'
 import Code from './components/Code'
-import CodeWrapper from './components/CodeWrapper'
+import CodeBox from './components/CodeBox'
 import Drawing from './components/Drawing'
 import Header from './components/Header'
 import Horizontal from './components/Horizontal'
 import Image from './components/Image'
 import KingMarkdown from './components/KingMarkdown'
 import KingMarkdownStatic from './components/KingMarkdownStatic'
+import Metadata from './components/Metadata'
 import Provider from './components/Provider'
 import PrincessJavaScript from './components/PrincessJavaScript'
 
 export const theme = {
   Provider,
-  ...fairyTaleTheme,
   components: {
     img: Image
   },
   metadata: {
+    title: `MDX: content for kings and princesses`,
     author: `Josh Dzielak`,
     twitter: `@dzello`,
     event_twitter: `@jamstackconf`,
@@ -31,6 +32,7 @@ export const theme = {
     date: `July 9, 2019`,
     repository: `https://github.com/developermode/mdx-fairy-tale`
   },
+  ...fairyTaleTheme,
 }
 
 <Head>
@@ -50,7 +52,9 @@ export const theme = {
 
 # 👑 👸
 
-# MDX: content for kings <br/> and princesses
+<div>
+  <h1><Metadata field="title" /></h1>
+</div>
 
 ---
 
@@ -192,21 +196,21 @@ export const theme = {
   <div style={{ textAlign: 'right', marginRight: '100px' }}>
     <h3>Content <br/>interactions:</h3>
   </div>
-  <CodeWrapper>
+  <CodeBox>
     <h3>Markdown</h3>
     <div>read, scroll</div>
     <p></p>
-  </CodeWrapper>
+  </CodeBox>
 </Horizontal>
 <Horizontal width="75vw" style={{  }}>
   <div style={{ textAlign: 'right', marginRight: '100px' }}>
     <h3>More content <br/>interactions:</h3>
   </div>
-  <CodeWrapper>
+  <CodeBox>
     <h3>Markdown + JSX</h3>
     <div>read, scroll, click, <br/> tap, pinch, zoom, <br/> rotate, keypress, shake, <br/> run, drag, drop, <br/> swipe, flip, rotate</div>
     <p></p>
-  </CodeWrapper>
+  </CodeBox>
 </Horizontal>
 </Appear>
 
@@ -228,11 +232,11 @@ export const theme = {
     <KingMarkdown height="50vh" hoverable={false} />
   </div>
   <div>
-    <CodeWrapper>
+    <CodeBox>
       <Code>
         {snippets.mdx1}
       </Code>
-    </CodeWrapper>
+    </CodeBox>
   </div>
 </Horizontal>
 <Horizontal>
@@ -240,11 +244,11 @@ export const theme = {
     <KingMarkdown height="75vh" hoverable={false} />
   </div>
   <div>
-    <CodeWrapper>
+    <CodeBox>
     <Code>
       {snippets.mdx2}
     </Code>
-    </CodeWrapper>
+    </CodeBox>
   </div>
 </Horizontal>
 <Horizontal>
@@ -252,11 +256,11 @@ export const theme = {
     <KingMarkdown height="75vh" src="/images/king-markdown-2.png" hoverable={false} />
   </div>
   <div>
-    <CodeWrapper>
+    <CodeBox>
     <Code>
       {snippets.mdx3}
     </Code>
-    </CodeWrapper>
+    </CodeBox>
   </div>
 </Horizontal>
 </Appear>
@@ -267,9 +271,9 @@ export const theme = {
     scope={{ KingMarkdown: KingMarkdownStatic, PrincessJavaScript }}>
   <Horizontal width="90vw">
     <LivePreview />
-    <CodeWrapper>
+    <CodeBox>
       <LiveEditor style={{ fontFamily: 'Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace', fontSize: '22px', lineHeight: "42px", background: 'none', caretColor: '#0a0a0a' }} theme={prismTheme} />
-    </CodeWrapper>
+    </CodeBox>
   </Horizontal>
 </LiveProvider>
 

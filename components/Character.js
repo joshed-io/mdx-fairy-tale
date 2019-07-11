@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import Code from "./Code";
-import CodeWrapper from "./CodeWrapper";
+import CodeWrapper from "./CodeBox";
 
 export default class Character extends React.Component {
   constructor(props) {
