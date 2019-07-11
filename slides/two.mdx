@@ -10,6 +10,7 @@ import Horizontal from '../layouts/Horizontal'
 import KingMarkdown from '../components/KingMarkdown'
 import KingMarkdownStatic from '../components/KingMarkdownStatic'
 import PrincessJavaScript from '../components/PrincessJavaScript'
+import PrincessJavaScriptStatic from '../components/PrincessJavaScriptStatic'
 import Spacer from '../components/Spacer'
 import * as snippets from '../snippets/index'
 
@@ -66,7 +67,9 @@ import * as snippets from '../snippets/index'
 
 <LiveProvider
     code={snippets.liveCode}
-    scope={{ KingMarkdown: KingMarkdownStatic }}>
+    scope={{ 
+      KingMarkdown: KingMarkdownStatic, 
+      PrincessJavaScript: PrincessJavaScriptStatic }}>
   <Horizontal width="90vw">
     <LivePreview />
     <div>
@@ -77,7 +80,7 @@ import * as snippets from '../snippets/index'
           background: 'none', caretColor: '#0a0a0a' }} />
       </Box>
       <p style={{ fontSize: '24px' }}>
-        Try changing <i>src</i> to <i>/images/king-markdown-4.png</i><br/>
+        Try changing <i>src</i> to <i>/images/princess-javascript-2.png</i><br/>
         and the height to <i>100vh</i>.
       </p>
     </div>

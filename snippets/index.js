@@ -1,5 +1,5 @@
-export const liveCode = `<KingMarkdown 
-    src="/images/king-markdown-1.png"
+export const liveCode = `<PrincessJavaScript 
+    src="/images/princess-javascript-1.png"
     height="50vh" />`
 
 export const mdx1 = `
