@@ -3,41 +3,17 @@ import { css } from "styled-components";
 
 export default class Drawing extends React.Component {
   componentDidMount() {
-    let x, y, isPainting = true;
+    let x, y, isPainting = false;
     const canvas = document.querySelector("canvas");
     const context = canvas.getContext("2d");
-
-    const colors = [
-      "#F4908E",
-      "#F2F097",
-      "#88B0DC",
-      "#F7B5D1",
-      "#53C4AF",
-      "#FDE38C"
-    ];
-    const colorDiv = document.querySelector(".colors");
-
-    colors.forEach(color => {
-      const button = document.createElement("button");
-      button.classList.add("color");
-      button.style.backgroundColor = color;
-      button.style.height = "50px"
-      button.style.width = "50px"
-      button.style.marginRight = "10px"
-      button.style.borderRadius = "50%"
-      button.style.border = "none"
-      button.style.outline = "none"
-      colorDiv.appendChild(button);
-      button.addEventListener("click", () => (context.strokeStyle = color));
-    });
 
     const setSize = () => {
       // set dimensions on the canvas
       canvas.setAttribute("width", window.innerWidth);
       canvas.setAttribute("height", window.innerHeight);
-      context.strokeStyle = colors[0];
+      context.strokeStyle = this.props.color || "#dd4a68";
       context.lineJoin = "round";
-      context.lineWidth = 5;
+      context.lineWidth = this.props.width || 5;
     };
 
     setSize();
@@ -93,7 +69,7 @@ export default class Drawing extends React.Component {
     canvas.addEventListener("touchmove", paint);
 
     function exit() {
-      // isPainting = false;
+      isPainting = false;
     }
 
     canvas.addEventListener("mouseup", exit);
@@ -104,13 +80,14 @@ export default class Drawing extends React.Component {
   render() {
     return (
       <>
-        <div className="colors" css={css`
+        {this.props.children}
+        <div css={css`
           position: relative;
-          display: none;
-          z-index: 2;
-          margin: 0 40px;
-          text-align: center;
-        `} />
+          z-index: 3;
+          font-size: 24px;
+        `}>
+          Credit: <a href="https://dev.to/aspittel/how-to-create-the-drawing-interaction-on-dev-s-offline-page-1mbe">Ali Spittel</a>
+        </div>
         <canvas
           css={css`
             height: 100vh;

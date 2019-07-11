@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
-const Box = ({ children }) => (
-  <Wrapper>
+const Box = ({ style, children }) => (
+  <Wrapper style={style}>
     <Overlay />
     <Content>
       {children}
@@ -13,7 +13,6 @@ const Box = ({ children }) => (
 export default Box;
 
 const Wrapper = styled.div`
-  background: ${props => props.background || `transparent`};
   position: relative;
   overflow: hidden;
   border: 1px solid #cacaca;

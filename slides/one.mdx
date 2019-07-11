@@ -34,7 +34,8 @@ import Metadata from '../components/Metadata'
     <h1>&lt;Josh&gt;</h1>
   </div>
   <Appear>
-    <img src="/images/josh-dzielak-crown.png" style={{ width: '30vw', borderRadius: '250px' }} />
+    <img src="/images/josh-dzielak-crown.png" 
+         style={{ width: '30vw', borderRadius: '250px' }} />
     <div>
       <img src="/images/algolia-logo.png" />
     </div>
@@ -84,7 +85,8 @@ import Metadata from '../components/Metadata'
     <KingMarkdown src="/images/king-markdown-2.png" hoverable={false} />
     <img src="/images/great-wall-of-text-2.png"
            style={{ height: '60vh', opacity: '0.8', 
-                    borderRadius: '400px', margin: '-250px 0 0 -450px' }} />
+                    borderRadius: '400px',
+                    margin: '-250px 0 0 -450px' }} />
   </Horizontal>
 </Appear>
 
@@ -165,24 +167,24 @@ import Metadata from '../components/Metadata'
 ---
 
 <Appear>
-<Horizontal width="75vw" style={{  }}>
-  <div style={{ textAlign: 'right', marginRight: '100px' }}>
-    <h3>Content <br/>interactions:</h3>
-  </div>
-  <Box>
-    <h3>Markdown</h3>
-    <div>read, scroll</div>
-    <p></p>
-  </Box>
-</Horizontal>
-<Horizontal width="75vw" style={{  }}>
-  <div style={{ textAlign: 'right', marginRight: '100px' }}>
-    <h3>More content <br/>interactions:</h3>
-  </div>
-  <Box>
-    <h3>Markdown + JSX</h3>
-    <div>read, scroll, click, <br/> tap, pinch, zoom, <br/> rotate, keypress, shake, <br/> run, drag, drop, <br/> swipe, flip, rotate</div>
-    <p></p>
-  </Box>
-</Horizontal>
+  <Horizontal width="75vw">
+    <div style={{ textAlign: 'right', marginRight: '100px' }}>
+      <h3>Content <br/>interactions:</h3>
+    </div>
+    <Box>
+      <h3>Markdown</h3>
+      <div>read, scroll</div>
+      <p></p>
+    </Box>
+  </Horizontal>
+  <Horizontal width="75vw">
+    <div style={{ textAlign: 'right', marginRight: '100px' }}>
+      <h3>More content <br/>interactions:</h3>
+    </div>
+    <Box>
+      <h3>Markdown + JSX</h3>
+      <div>read, scroll, click, <br/> tap, pinch, zoom, <br/> rotate, keypress, shake, <br/> run, drag, drop, <br/> swipe, flip, rotate</div>
+      <p></p>
+    </Box>
+  </Horizontal>
 </Appear>

@@ -14,8 +14,7 @@ export default {
     backgroundSize: 'cover'
   },
   heading: {
-    margin: 0,
-    margin: '0.2em 0'
+    margin: '0.25em 0'
   },
   css: {
     textarea: {
