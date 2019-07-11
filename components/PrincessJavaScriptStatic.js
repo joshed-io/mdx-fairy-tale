@@ -1,11 +1,9 @@
-import React from "react";
-import Character from './Character'
+import PrincessJavaScript from './PrincessJavaScript'
 
-export default class PrincessJavaScriptStatic extends Character {
+export default class PrincessJavaScriptStatic extends PrincessJavaScript {
 }
 
 PrincessJavaScriptStatic.defaultProps = {
-  ...Character.defaultProps,
-  hoverable: false,
-  src: `/images/princess-javascript-1.png`
+  ...PrincessJavaScript.defaultProps,
+  hoverable: false
 }

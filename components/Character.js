@@ -30,7 +30,8 @@ export default class Character extends React.Component {
   }
 
   renderCharacter() {
-    const src = this.state.active && this.props.activeSrc ? this.props.activeSrc : this.props.src; 
+    const src = `${this.props.srcPrefix}${this.props.image}`;
+    console.log(src)
     if (this.state.codeVisible && this.props.codeSnippet) {
       return (
         <div css={{ position: "relative" }}>
@@ -73,9 +74,9 @@ export default class Character extends React.Component {
 
 Character.defaultProps = {
   hoverable: true,
-  height: `50vh`,
-  src: ``,
-  activeSrc: ``
+  height: '50vh',
+  image: '',
+  srcPrefix: '/images/'
 };
 
 const Image = styled.img`

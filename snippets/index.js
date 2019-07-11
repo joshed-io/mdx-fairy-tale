@@ -1,5 +1,5 @@
 export const liveCode = `<PrincessJavaScript 
-    src="/images/princess-javascript-1.png"
+    image="princess-javascript-1.png"
     height="50vh" />`
 
 export const mdx1 = `
@@ -31,7 +31,7 @@ import KingMarkdown from 'components/KingMarkdown.js'
 
 <KingMarkdown
   height="75vh"
-  src="/images/king-markdown-2.png" />
+  image="king-markdown-2.png" />
 
 This king has a height and image declared.
 
@@ -54,7 +54,7 @@ export default class KingMarkdown extends React.Component {
   render() {
     return (
       <div onMouseEnter={this.handleHover} onMouseLeave={this.handleHover}>
-        <img src="/images/king-markdown.png" css={{
+        <img src="king-markdown.png" css={{
           height: '25vh',
           visibility: this.state.visible ? 'visible' : 'hidden' }} />
       </div>

@@ -6,5 +6,5 @@ export default class PrincessJavaScript extends Character {
 
 PrincessJavaScript.defaultProps = {
   ...Character.defaultProps,
-  src: `/images/princess-javascript-1.png`
+  image: `princess-javascript-1.png`,
 }

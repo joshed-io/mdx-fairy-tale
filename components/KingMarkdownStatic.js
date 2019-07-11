@@ -1,11 +1,9 @@
-import React from "react";
-import Character from './Character'
+import KingMarkdown from './KingMarkdown'
 
-export default class KingMarkdownStatic extends Character {
+export default class KingMarkdownStatic extends KingMarkdown {
 }
 
 KingMarkdownStatic.defaultProps = {
-  ...Character.defaultProps,
-  hoverable: false,
-  src: `/images/king-markdown-1.png`
+  ...KingMarkdown.defaultProps,
+  hoverable: false
 }
