@@ -64,12 +64,16 @@ import Spacer from '../components/Spacer'
 
 ---
 
-<LiveProvider code={snippets.liveCode}
+<LiveProvider
+    code={snippets.liveCode}
     scope={{ KingMarkdown: KingMarkdownStatic, PrincessJavaScript }}>
   <Horizontal width="90vw">
     <LivePreview />
     <Box>
-      <LiveEditor style={{ fontFamily: 'Consolas, Monaco, monospace', fontSize: '22px', lineHeight: "42px", background: 'none', caretColor: '#0a0a0a' }} theme={prismTheme} />
+      <LiveEditor theme={prismTheme} style={{ 
+        fontFamily: 'Consolas, Monaco, monospace',
+        fontSize: '22px', lineHeight: "42px",
+        background: 'none', caretColor: '#0a0a0a' }} />
     </Box>
   </Horizontal>
 </LiveProvider>
@@ -101,14 +105,14 @@ import Spacer from '../components/Spacer'
 
 <Horizontal width="90vw">
   <div>
-    <img src="/images/gatsby-logo.png" style={{ width: "15vw" }} />
+    <img src="/images/gatsby-logo.png" width="15vw" />
     <Spacer height="50px" />
-    <img src="/images/parcel-logo.png" style={{ width: "20vw" }} />
+    <img src="/images/parcel-logo.png" width="20vw" />
   </div>
   <div>
-    <img src="/images/nextjs-logo.png" style={{ width: "12vw" }} />
+    <img src="/images/nextjs-logo.png" width="12vw" />
     <Spacer height="50px" />
-    <img src="/images/webpack-logo.png" style={{ width: "18vw" }} />
+    <img src="/images/webpack-logo.png" width= "18vw" />
   </div>
   <div>
     more at <br/>
