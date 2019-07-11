@@ -1,36 +1,12 @@
 import React from 'react'
-import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live'
-import { Head  } from 'mdx-deck'
-import prismTheme from 'prism-react-renderer/themes/github'
+import { Head } from 'mdx-deck'
 
-import fairyTaleTheme from './themes/fairy-tale'
-import * as snippets from './snippets/index'
-import Appear from './components/Appear'
-import Code from './components/Code'
-import CodeBox from './components/CodeBox'
-import Drawing from './components/Drawing'
-import Header from './components/Header'
-import Horizontal from './components/Horizontal'
-import Image from './components/Image'
-import KingMarkdown from './components/KingMarkdown'
-import KingMarkdownStatic from './components/KingMarkdownStatic'
-import Metadata from './components/Metadata'
-import Provider from './components/Provider'
-import PrincessJavaScript from './components/PrincessJavaScript'
-
-export const theme = {
-  Provider,
-  ...fairyTaleTheme,
-  metadata: {
-    title: `MDX: content for kings and princesses`,
-    author: `Josh Dzielak`,
-    twitter: `@dzello`,
-    event_twitter: `@jamstackconf`,
-    event_twitter_link: `https://twitter.com/jamstackconf`,
-    date: `July 9, 2019`,
-    repository: `https://github.com/developermode/mdx-fairy-tale`
-  }
-}
+import Appear from '../components/Appear'
+import Box from '../components/Box'
+import Horizontal from '../components/Horizontal'
+import KingMarkdown from '../components/KingMarkdown'
+import PrincessJavaScript from '../components/PrincessJavaScript'
+import Metadata from '../components/Metadata'
 
 <Head>
   <title>MDX: content for kings and princesses</title>
@@ -193,134 +169,20 @@ export const theme = {
   <div style={{ textAlign: 'right', marginRight: '100px' }}>
     <h3>Content <br/>interactions:</h3>
   </div>
-  <CodeBox>
+  <Box>
     <h3>Markdown</h3>
     <div>read, scroll</div>
     <p></p>
-  </CodeBox>
+  </Box>
 </Horizontal>
 <Horizontal width="75vw" style={{  }}>
   <div style={{ textAlign: 'right', marginRight: '100px' }}>
     <h3>More content <br/>interactions:</h3>
   </div>
-  <CodeBox>
+  <Box>
     <h3>Markdown + JSX</h3>
     <div>read, scroll, click, <br/> tap, pinch, zoom, <br/> rotate, keypress, shake, <br/> run, drag, drop, <br/> swipe, flip, rotate</div>
     <p></p>
-  </CodeBox>
+  </Box>
 </Horizontal>
 </Appear>
-
----
-
-# 🕶️
-
-# To the code!
-
----
-
-<KingMarkdown codeSnippet={snippets.jsx1} />
-
----
-
-<Appear>
-  <Horizontal>
-    <div>
-      <KingMarkdown height="50vh" hoverable={false} />
-    </div>
-    <div>
-      <CodeBox>
-        <Code>
-          {snippets.mdx1}
-        </Code>
-      </CodeBox>
-    </div>
-  </Horizontal>
-  <Horizontal>
-    <div>
-      <KingMarkdown height="75vh" hoverable={false} />
-    </div>
-    <div>
-      <CodeBox>
-        <Code>
-          {snippets.mdx2}
-        </Code>
-      </CodeBox>
-    </div>
-  </Horizontal>
-  <Horizontal>
-    <div>
-      <KingMarkdown height="75vh" src="/images/king-markdown-2.png" hoverable={false} />
-    </div>
-    <div>
-      <CodeBox>
-        <Code>
-          {snippets.mdx3}
-        </Code>
-      </CodeBox>
-    </div>
-  </Horizontal>
-</Appear>
-
----
-
-<LiveProvider code={snippets.liveCode}
-    scope={{ KingMarkdown: KingMarkdownStatic, PrincessJavaScript }}>
-  <Horizontal width="90vw">
-    <LivePreview />
-    <CodeBox>
-      <LiveEditor style={{ fontFamily: 'Consolas, Monaco, monospace', fontSize: '22px', lineHeight: "42px", background: 'none', caretColor: '#0a0a0a' }} theme={prismTheme} />
-    </CodeBox>
-  </Horizontal>
-</LiveProvider>
-
----
-
-## Use MDX for:
-
-<br/>
-
-<Horizontal width="80vw">
-  <div>
-    🗯️ Site widgets
-    <br/><br/>
-    👨‍🎨 Visual storytelling
-  </div>
-  <div>
-    💅 Design systems
-    <br/><br/>
-    🚜 Page building
-  </div>
-</Horizontal>
-
-<br/>
-
----
-
-## Try MDX in your app:
-
-<br/>
-
-<Horizontal width="90vw">
-  <div>
-    <img src="/images/gatsby-logo.png" style={{ width: "15vw" }} />
-    <br/><br/>
-    <img src="/images/parcel-logo.png" style={{ width: "20vw" }} />
-  </div>
-  <div>
-    <img src="/images/nextjs-logo.png" style={{ width: "12vw" }} />
-    <br/><br/>
-    <img src="/images/webpack-logo.png" style={{ width: "18vw" }} />
-    </div>
-  <div>
-    more at
-    <br/>
-    <a href="https://mdxjs.com/">mdxjs.com</a>
-  </div>
-</Horizontal>
-
----
-
-# Thank you!
-
-<Drawing />

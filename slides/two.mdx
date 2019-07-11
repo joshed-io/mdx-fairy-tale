@@ -1,0 +1,125 @@
+import React from 'react'
+import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live'
+import prismTheme from 'prism-react-renderer/themes/github'
+
+import * as snippets from '../snippets/index'
+import Appear from '../components/Appear'
+import Box from '../components/Box'
+import Code from '../components/Code'
+import Drawing from '../components/Drawing'
+import Horizontal from '../components/Horizontal'
+import KingMarkdown from '../components/KingMarkdown'
+import KingMarkdownStatic from '../components/KingMarkdownStatic'
+import PrincessJavaScript from '../components/PrincessJavaScript'
+
+# 🕶️
+
+# To the code!
+
+---
+
+<KingMarkdown codeSnippet={snippets.jsx1} />
+
+---
+
+<Appear>
+  <Horizontal>
+    <div>
+      <KingMarkdown height="50vh" hoverable={false} />
+    </div>
+    <div>
+      <Box>
+        <Code>
+          {snippets.mdx1}
+        </Code>
+      </Box>
+    </div>
+  </Horizontal>
+  <Horizontal>
+    <div>
+      <KingMarkdown height="75vh" hoverable={false} />
+    </div>
+    <div>
+      <Box>
+        <Code>
+          {snippets.mdx2}
+        </Code>
+      </Box>
+    </div>
+  </Horizontal>
+  <Horizontal>
+    <div>
+      <KingMarkdown height="75vh" src="/images/king-markdown-2.png" hoverable={false} />
+    </div>
+    <div>
+      <Box>
+        <Code>
+          {snippets.mdx3}
+        </Code>
+      </Box>
+    </div>
+  </Horizontal>
+</Appear>
+
+---
+
+<LiveProvider code={snippets.liveCode}
+    scope={{ KingMarkdown: KingMarkdownStatic, PrincessJavaScript }}>
+  <Horizontal width="90vw">
+    <LivePreview />
+    <Box>
+      <LiveEditor style={{ fontFamily: 'Consolas, Monaco, monospace', fontSize: '22px', lineHeight: "42px", background: 'none', caretColor: '#0a0a0a' }} theme={prismTheme} />
+    </Box>
+  </Horizontal>
+</LiveProvider>
+
+---
+
+## Use MDX for:
+
+<br/>
+
+<Horizontal width="80vw">
+  <div>
+    🗯️ Site widgets
+    <br/><br/>
+    👨‍🎨 Visual storytelling
+  </div>
+  <div>
+    💅 Design systems
+    <br/><br/>
+    🚜 Page building
+  </div>
+</Horizontal>
+
+<br/>
+
+---
+
+## Try MDX in your app:
+
+<br/>
+
+<Horizontal width="90vw">
+  <div>
+    <img src="/images/gatsby-logo.png" style={{ width: "15vw" }} />
+    <br/><br/>
+    <img src="/images/parcel-logo.png" style={{ width: "20vw" }} />
+  </div>
+  <div>
+    <img src="/images/nextjs-logo.png" style={{ width: "12vw" }} />
+    <br/><br/>
+    <img src="/images/webpack-logo.png" style={{ width: "18vw" }} />
+    </div>
+  <div>
+    more at
+    <br/>
+    <a href="https://mdxjs.com/">mdxjs.com</a>
+  </div>
+</Horizontal>
+
+---
+
+# Thank you!
+
+<Drawing />

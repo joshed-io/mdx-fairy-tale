@@ -3,8 +3,8 @@
   "name": "mdx-fairy-tale",
   "version": "0.0.1",
   "scripts": {
-    "start": "mdx-deck deck.mdx",
-    "build": "mdx-deck build deck.mdx && cp -r images dist/",
+    "start": "mdx-deck deck.js",
+    "build": "mdx-deck build deck.js && cp -r images dist/",
     "help": "mdx-deck"
   },
   "devDependencies": {

@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const CodeBox = ({ children }) => (
+const Box = ({ children }) => (
   <Wrapper>
     <Overlay />
     <Content>
@@ -10,7 +10,7 @@ const CodeBox = ({ children }) => (
   </Wrapper>
 );
 
-export default CodeBox;
+export default Box;
 
 const Wrapper = styled.div`
   background: ${props => props.background || `transparent`};

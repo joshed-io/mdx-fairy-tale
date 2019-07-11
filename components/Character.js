@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
+import Box from "./Box";
 import Code from "./Code";
-import CodeWrapper from "./CodeBox";
 
 export default class Character extends React.Component {
   constructor(props) {
@@ -45,9 +45,9 @@ export default class Character extends React.Component {
               zoom: '0.5'
             }}
           />
-          <CodeWrapper>
-            <Code fontSize="18px">{this.props.codeSnippet}</Code>
-          </CodeWrapper>
+          <Box>
+            <Code style={{ fontSize: "18px" }}>{this.props.codeSnippet}</Code>
+          </Box>
         </div>
       );
     } else {
