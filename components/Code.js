@@ -10,8 +10,8 @@ const Code = props => (
       margin: "0",
       padding: "0",
       background: "none",
-      fontSize: '22px',
-      lineHeight: '26px',
+      fontSize: '20px',
+      lineHeight: '24px',
       ...props.style
     }}
   >
