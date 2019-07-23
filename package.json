@@ -9,6 +9,7 @@
   },
   "devDependencies": {
     "mdx-deck": "^2.5",
+    "lodash": ">=4.17.13",
     "prism-react-renderer": "^0.1.7",
     "react-live": "^2.1.2",
     "react-syntax-highlighter": "^11.0.1",
