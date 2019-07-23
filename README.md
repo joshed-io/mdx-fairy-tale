@@ -6,7 +6,7 @@ A ⚡ lighting talk given at [JAMStack Conf London](https://jamstackconf.com/lon
 
 The presentation is about [MDX](https://mdxjs.com/) (Markdown + JSX) and how it can be used to add interactivity to text-heavy content. The presentation itself is a React application built with MDX and [MDX Deck](https://github.com/jxnblk/mdx-deck).
 
-You can read a blog post about the story behind this talk: **[Props for props: how I made a royally unusual talk for JAMstack Conf London](https://dzello.com/blog/2019/07/21/mdx-talk-jamstack-conf-london/)**.
+You can read a blog post about the story behind this talk: **[Props for props: how I made a royally unusual talk for JAMstack Conf London](https://dzello.com/blog/2019/07/23/mdx-talk-jamstack-conf-london/)**.
 
 Or you can:
 
