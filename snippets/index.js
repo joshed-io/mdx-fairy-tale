@@ -7,7 +7,7 @@ import KingMarkdown from 'components/KingMarkdown.js'
 
 # Meet King Markdown
 
-<KingMarkdown width="35vw" />
+<KingMarkdown width="25vw" />
 
 This king has a width property declared. 
 
