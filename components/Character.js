@@ -38,7 +38,7 @@ export default class Character extends React.Component {
           <Image
             src={src}
             css={{
-              height: this.props.height,
+              width: this.props.width,
               position: "absolute",
               opacity: "1",
               bottom: "20px",
@@ -74,13 +74,13 @@ export default class Character extends React.Component {
 
 Character.defaultProps = {
   hoverable: true,
-  height: '50vh',
+  width: '25vw',
   image: '',
   srcPrefix: '/images/'
 };
 
 const Image = styled.img`
-height: ${props => props.height};
+width: ${props => props.width};
 cursor: ${props => props.codeSnippet ? 'pointer' : 'inherit'};
 `;
 
