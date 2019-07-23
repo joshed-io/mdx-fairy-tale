@@ -2,18 +2,20 @@
 
 # MDX: content for kings and princesses
 
-A ⚡ lighting talk given at JAMStack_conf London on July 9, 2019. View the [slides here](https://mdx-fairy-tale.developermode.com/).
+A ⚡ lighting talk given at [JAMStack Conf London](https://jamstackconf.com/london) on July 9, 2019.
 
-The presentation is about using [MDX](https://mdxjs.com/) (Markdown + JSX) to make JAMstack content more interactive. The presentations itself is built with MDX and [mdx-deck](https://github.com/jxnblk/mdx-deck).
+The presentation is about [MDX](https://mdxjs.com/) (Markdown + JSX) and how it can be used to add interactivity to text-heavy content. The presentation itself is a React application built with MDX and [MDX Deck](https://github.com/jxnblk/mdx-deck).
 
-If you're looking to learn more about mdx-deck and how these slides were built from React components and Mardkwn, check out the `slides`, `components`, and `layouts` folders in particular.
+- Learn more: [Props for props: how I made a royally unusual talk for JAMstack Conf London](https://dzello.com/blog/2019/07/21/mdx-talk-jamstack-conf-london/)
+- View the [slides](https://mdx-fairy-tale.developermode.com/)
+- Check out the `slides`, `components`, and `layouts` folders in this repository to see how the presentation is build with MDX Deck
 
 ## Thanks to...
 
-- [Brent Jackson](https://github.com/jxnblk) for creating [mdx-deck](https://github.com/jxnblk/mdx-deck)
-- [John Otander](https://github.com/johno) for creating [MDX](https://github.com/mdx-js/mdx)
+- [Brent Jackson](https://github.com/jxnblk) for creating [MDX Deck](https://github.com/jxnblk/mdx-deck)
+- [John Otander](https://github.com/johno) and the team behind [MDX](https://github.com/mdx-js/mdx)
+- [JAMstack Conf](https://jamstackconf.com/) for inviting me to speak and [Phil Hawksworth](https://twitter.com/philhawksworth) for being a fantastic MC
 - [Netlify](https://netlify.com/) for hosting the slides
-- [@jamstackconf](https://jamstackconf.com/) for inviting me to speak
 
 # Photos
 
