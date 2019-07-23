@@ -1,5 +1,7 @@
 [![MDX fairy tale slide](images/mdx-fairy-tale-title-slide.png)](https://mdx-fairy-tale.developermode.com/)
 
+[![Josh Dzielak giving the talk](https://res.cloudinary.com/dzello/image/upload/q_auto/v1563663228/blog/josh-dzielak-jamstack-conf-london.png)](https://mdx-fairy-tale.developermode.com/)
+
 # MDX: content for kings and princesses
 
 A ⚡ lighting talk given at JAMStack_conf London on July 9, 2019. View the [slides here](https://mdx-fairy-tale.developermode.com/).
