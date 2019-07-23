@@ -8,9 +8,7 @@ import Code from '../components/Code'
 import Drawable from '../layouts/Drawable'
 import Horizontal from '../layouts/Horizontal'
 import KingMarkdown from '../components/KingMarkdown'
-import KingMarkdownStatic from '../components/KingMarkdownStatic'
 import PrincessJavaScript from '../components/PrincessJavaScript'
-import PrincessJavaScriptStatic from '../components/PrincessJavaScriptStatic'
 import Spacer from '../components/Spacer'
 import * as snippets from '../snippets/index'
 
@@ -20,13 +18,13 @@ import * as snippets from '../snippets/index'
 
 ---
 
-<KingMarkdown codeSnippet={snippets.jsx1} />
+<KingMarkdown codeSnippet={snippets.jsx1} hoverable={true} />
 
 ---
 
 <Appear>
   <Horizontal>
-    <KingMarkdown width="25vw" hoverable={false} />
+    <KingMarkdown width="25vw" />
     <Box>
       <Code>
         {snippets.mdx1}
@@ -34,7 +32,7 @@ import * as snippets from '../snippets/index'
     </Box>
   </Horizontal>
   <Horizontal>
-    <KingMarkdown width="35vw" hoverable={false} />
+    <KingMarkdown width="35vw" />
     <Box>
       <Code>
         {snippets.mdx2}
@@ -42,7 +40,7 @@ import * as snippets from '../snippets/index'
     </Box>
   </Horizontal>
   <Horizontal>
-    <KingMarkdown width="35vw" image="king-markdown-2.png" hoverable={false} />
+    <KingMarkdown width="35vw" image="king-markdown-2.png" />
     <Box>
       <Code>
         {snippets.mdx3}
@@ -55,9 +53,7 @@ import * as snippets from '../snippets/index'
 
 <LiveProvider
     code={snippets.liveCode}
-    scope={{ 
-      KingMarkdown: KingMarkdownStatic, 
-      PrincessJavaScript: PrincessJavaScriptStatic }}>
+    scope={{ KingMarkdown, PrincessJavaScript }}>
   <Horizontal width="90vw">
     <LivePreview />
     <div>

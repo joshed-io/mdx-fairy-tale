@@ -67,13 +67,18 @@ export default class Character extends React.Component {
         onClick={this.handleClick}
       >
         {this.renderCharacter()}
+        {this.props.hoverable && !this.state.active && !this.state.codeVisible ?
+          <p style={{ fontSize: '24px' }}>
+            Hover, then click.
+          </p>
+        : ''}
       </div>
     );
   }
 }
 
 Character.defaultProps = {
-  hoverable: true,
+  hoverable: false,
   width: '25vw',
   image: '',
   srcPrefix: '/images/'
